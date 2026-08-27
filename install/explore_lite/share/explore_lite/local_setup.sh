@@ -1,0 +1,1 @@
+/home/ines/tiago_ws/build/explore_lite/ament_cmake_environment_hooks/local_setup.sh

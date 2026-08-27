@@ -1,0 +1,5 @@
+repositories:
+  m-explore-ros2:
+    type: git
+    url: https://github.com/hrushikesh-y/m-explore-ros2.git
+    version: humble-devel

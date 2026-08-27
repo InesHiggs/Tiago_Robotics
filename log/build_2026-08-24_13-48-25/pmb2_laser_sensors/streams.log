@@ -1,0 +1,32 @@
+[0.425s] Invoking command in '/home/ines/tiago_ws/build/pmb2_laser_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/pmb2_laser_sensors -- -j8 -l8
+[2.848s] Invoked command in '/home/ines/tiago_ws/build/pmb2_laser_sensors' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/pmb2_laser_sensors -- -j8 -l8
+[3.097s] Invoking command in '/home/ines/tiago_ws/build/pmb2_laser_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/pmb2_laser_sensors
+[3.196s] -- Install configuration: ""
+[3.256s] -- Execute custom install script
+[3.302s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/config/sick-551_filter.yaml
+[3.314s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/config/sick-561_filter.yaml
+[3.326s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/config/sick-571_filter.yaml
+[3.328s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/config/sick_tim551_laser.yaml
+[3.329s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/config/sick_tim561_laser.yaml
+[3.329s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/config/sick_tim571_laser.yaml
+[3.546s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/launch/laser.launch.py
+[3.595s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/launch/laser_filters.launch.py
+[3.608s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/launch/sick-551_laser.launch.py
+[3.610s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/launch/sick-561_laser.launch.py
+[3.615s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/launch/sick-571_laser.launch.py
+[3.618s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/ament_index/resource_index/package_run_dependencies/pmb2_laser_sensors
+[3.766s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/ament_index/resource_index/parent_prefix_path/pmb2_laser_sensors
+[3.770s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/environment/ament_prefix_path.sh
+[3.770s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/environment/ament_prefix_path.dsv
+[3.774s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/environment/path.sh
+[3.775s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/environment/path.dsv
+[3.775s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/local_setup.bash
+[3.783s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/local_setup.sh
+[3.783s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/local_setup.zsh
+[3.783s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/local_setup.dsv
+[3.785s] -- Symlinking: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/package.dsv
+[3.852s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/ament_index/resource_index/packages/pmb2_laser_sensors
+[4.144s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/cmake/pmb2_laser_sensorsConfig.cmake
+[4.146s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/cmake/pmb2_laser_sensorsConfig-version.cmake
+[4.147s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_laser_sensors/share/pmb2_laser_sensors/package.xml
+[4.360s] Invoked command in '/home/ines/tiago_ws/build/pmb2_laser_sensors' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/pmb2_laser_sensors

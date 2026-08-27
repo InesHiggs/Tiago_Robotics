@@ -1,0 +1,1 @@
+/home/ines/tiago_ws/build/tiago_task2_interfaces/rosidl_generator_cpp/tiago_task2_interfaces/srv/detail/get_marker_pose__struct.hpp

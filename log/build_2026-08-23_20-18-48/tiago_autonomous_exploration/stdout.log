@@ -1,0 +1,23 @@
+running develop
+running egg_info
+creating tiago_autonomous_exploration.egg-info
+writing tiago_autonomous_exploration.egg-info/PKG-INFO
+writing dependency_links to tiago_autonomous_exploration.egg-info/dependency_links.txt
+writing entry points to tiago_autonomous_exploration.egg-info/entry_points.txt
+writing requirements to tiago_autonomous_exploration.egg-info/requires.txt
+writing top-level names to tiago_autonomous_exploration.egg-info/top_level.txt
+writing manifest file 'tiago_autonomous_exploration.egg-info/SOURCES.txt'
+reading manifest file 'tiago_autonomous_exploration.egg-info/SOURCES.txt'
+writing manifest file 'tiago_autonomous_exploration.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ines/tiago_ws/install/tiago_autonomous_exploration/lib/python3.10/site-packages/tiago-autonomous-exploration.egg-link (link to .)
+
+Installed /home/ines/tiago_ws/build/tiago_autonomous_exploration
+running symlink_data
+creating /home/ines/tiago_ws/install/tiago_autonomous_exploration/share/ament_index
+creating /home/ines/tiago_ws/install/tiago_autonomous_exploration/share/ament_index/resource_index
+creating /home/ines/tiago_ws/install/tiago_autonomous_exploration/share/ament_index/resource_index/packages
+symbolically linking /home/ines/tiago_ws/build/tiago_autonomous_exploration/resource/tiago_autonomous_exploration -> /home/ines/tiago_ws/install/tiago_autonomous_exploration/share/ament_index/resource_index/packages
+symbolically linking /home/ines/tiago_ws/build/tiago_autonomous_exploration/package.xml -> /home/ines/tiago_ws/install/tiago_autonomous_exploration/share/tiago_autonomous_exploration
+creating /home/ines/tiago_ws/install/tiago_autonomous_exploration/share/tiago_autonomous_exploration/launch
+symbolically linking /home/ines/tiago_ws/build/tiago_autonomous_exploration/launch/tiago_exploration.launch.py -> /home/ines/tiago_ws/install/tiago_autonomous_exploration/share/tiago_autonomous_exploration/launch

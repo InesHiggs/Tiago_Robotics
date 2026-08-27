@@ -1,0 +1,33 @@
+[1.096s] Invoking command in '/home/ines/tiago_ws/build/tiago_autonomous_navigation': PYTHONPATH=/home/ines/tiago_ws/build/tiago_autonomous_navigation/prefix_override:/home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ines/tiago_ws/build/tiago_autonomous_navigation/build --no-deps symlink_data
+[1.453s] running develop
+[1.453s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.454s]   warnings.warn(
+[1.717s] running egg_info
+[1.717s] creating tiago_autonomous_navigation.egg-info
+[1.717s] writing tiago_autonomous_navigation.egg-info/PKG-INFO
+[1.717s] writing dependency_links to tiago_autonomous_navigation.egg-info/dependency_links.txt
+[1.717s] writing entry points to tiago_autonomous_navigation.egg-info/entry_points.txt
+[1.717s] writing requirements to tiago_autonomous_navigation.egg-info/requires.txt
+[1.718s] writing top-level names to tiago_autonomous_navigation.egg-info/top_level.txt
+[1.718s] writing manifest file 'tiago_autonomous_navigation.egg-info/SOURCES.txt'
+[1.720s] reading manifest file 'tiago_autonomous_navigation.egg-info/SOURCES.txt'
+[1.721s] writing manifest file 'tiago_autonomous_navigation.egg-info/SOURCES.txt'
+[1.722s] running build_ext
+[1.723s] Creating /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/python3.10/site-packages/tiago-autonomous-navigation.egg-link (link to .)
+[1.724s] Installing localization script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation
+[1.724s] Installing localization_server script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation
+[1.724s] Installing navigation script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation
+[1.724s] Installing target_pose_server script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation
+[1.724s] Installing task_2_coordinator script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation
+[1.724s] 
+[1.724s] Installed /home/ines/tiago_ws/build/tiago_autonomous_navigation
+[1.725s] running symlink_data
+[1.725s] creating /home/ines/tiago_ws/install/tiago_autonomous_navigation/share/ament_index
+[1.725s] creating /home/ines/tiago_ws/install/tiago_autonomous_navigation/share/ament_index/resource_index
+[1.725s] creating /home/ines/tiago_ws/install/tiago_autonomous_navigation/share/ament_index/resource_index/packages
+[1.725s] symbolically linking /home/ines/tiago_ws/build/tiago_autonomous_navigation/resource/tiago_autonomous_navigation -> /home/ines/tiago_ws/install/tiago_autonomous_navigation/share/ament_index/resource_index/packages
+[1.726s] symbolically linking /home/ines/tiago_ws/build/tiago_autonomous_navigation/package.xml -> /home/ines/tiago_ws/install/tiago_autonomous_navigation/share/tiago_autonomous_navigation
+[1.726s] creating /home/ines/tiago_ws/install/tiago_autonomous_navigation/share/tiago_autonomous_navigation/launch
+[1.727s] symbolically linking /home/ines/tiago_ws/build/tiago_autonomous_navigation/launch/task2.launch.py -> /home/ines/tiago_ws/install/tiago_autonomous_navigation/share/tiago_autonomous_navigation/launch
+[1.727s] symbolically linking /home/ines/tiago_ws/build/tiago_autonomous_navigation/launch/autonomous_navigation.launch.py -> /home/ines/tiago_ws/install/tiago_autonomous_navigation/share/tiago_autonomous_navigation/launch
+[1.769s] Invoked command in '/home/ines/tiago_ws/build/tiago_autonomous_navigation' returned '0': PYTHONPATH=/home/ines/tiago_ws/build/tiago_autonomous_navigation/prefix_override:/home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ines/tiago_ws/build/tiago_autonomous_navigation/build --no-deps symlink_data

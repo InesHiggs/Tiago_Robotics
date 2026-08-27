@@ -1,0 +1,143 @@
+[0.086s] Invoking command in '/home/ines/tiago_ws/build/tiago_description': CMAKE_PREFIX_PATH=/home/ines/tiago_ws/install/tiago_controller_configuration:/home/ines/tiago_ws/install/pmb2_description:/home/ines/tiago_ws/install/pmb2_controller_configuration:/home/ines/tiago_ws/install/pmb2_robot:/home/ines/tiago_ws/install/pmb2_bringup:/home/ines/tiago_ws/install/pmb2_maps:/home/ines/tiago_ws/install/tiago_navigation:/home/ines/tiago_ws/install/tiago_rgbd_sensors:/home/ines/tiago_ws/install/tiago_laser_sensors:/home/ines/tiago_ws/install/tiago_exam_worlds:/home/ines/tiago_ws/install/tiago_exam:/home/ines/tiago_ws/install/tiago_2dnav:/home/ines/tiago_ws/install/pmb2_rgbd_sensors:/home/ines/tiago_ws/install/pmb2_navigation:/home/ines/tiago_ws/install/pmb2_laser_sensors:/home/ines/tiago_ws/install/pmb2_2dnav:/home/ines/tiago_ws/install/pal_navigation_cfg:/home/ines/tiago_ws/install/pal_navigation_cfg_bringup:/home/ines/tiago_ws/install/pal_navigation_cfg_params:/home/ines/tiago_ws/install/multirobot_map_merge:/home/ines/tiago_ws/install/explore_lite:/home/ines/test_ws/install/my_package:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake /home/ines/tiago_ws/src/tiago_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ines/tiago_ws/install/tiago_description
+[0.305s] -- The C compiler identification is GNU 11.4.0
+[0.461s] -- The CXX compiler identification is GNU 11.4.0
+[0.479s] -- Detecting C compiler ABI info
+[0.671s] -- Detecting C compiler ABI info - done
+[0.715s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.715s] -- Detecting C compile features
+[0.716s] -- Detecting C compile features - done
+[0.724s] -- Detecting CXX compiler ABI info
+[0.913s] -- Detecting CXX compiler ABI info - done
+[0.929s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.929s] -- Detecting CXX compile features
+[0.930s] -- Detecting CXX compile features - done
+[0.939s] -- Found ament_cmake_auto: 1.3.8 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[1.294s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.442s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.733s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.825s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.873s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.897s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.897s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.898s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.898s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.946s] -- Found PythonExtra: .so  
+[2.035s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.056s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.059s] -- Added test 'lint_cmake' to check CMake code style
+[2.061s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.071s] -- Added test 'xmllint' to check XML markup files
+[2.074s] -- Configuring done
+[2.082s] -- Generating done
+[2.083s] -- Build files have been written to: /home/ines/tiago_ws/build/tiago_description
+[2.095s] Invoked command in '/home/ines/tiago_ws/build/tiago_description' returned '0': CMAKE_PREFIX_PATH=/home/ines/tiago_ws/install/tiago_controller_configuration:/home/ines/tiago_ws/install/pmb2_description:/home/ines/tiago_ws/install/pmb2_controller_configuration:/home/ines/tiago_ws/install/pmb2_robot:/home/ines/tiago_ws/install/pmb2_bringup:/home/ines/tiago_ws/install/pmb2_maps:/home/ines/tiago_ws/install/tiago_navigation:/home/ines/tiago_ws/install/tiago_rgbd_sensors:/home/ines/tiago_ws/install/tiago_laser_sensors:/home/ines/tiago_ws/install/tiago_exam_worlds:/home/ines/tiago_ws/install/tiago_exam:/home/ines/tiago_ws/install/tiago_2dnav:/home/ines/tiago_ws/install/pmb2_rgbd_sensors:/home/ines/tiago_ws/install/pmb2_navigation:/home/ines/tiago_ws/install/pmb2_laser_sensors:/home/ines/tiago_ws/install/pmb2_2dnav:/home/ines/tiago_ws/install/pal_navigation_cfg:/home/ines/tiago_ws/install/pal_navigation_cfg_bringup:/home/ines/tiago_ws/install/pal_navigation_cfg_params:/home/ines/tiago_ws/install/multirobot_map_merge:/home/ines/tiago_ws/install/explore_lite:/home/ines/test_ws/install/my_package:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake /home/ines/tiago_ws/src/tiago_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ines/tiago_ws/install/tiago_description
+[2.097s] Invoking command in '/home/ines/tiago_ws/build/tiago_description': CMAKE_PREFIX_PATH=/home/ines/tiago_ws/install/tiago_controller_configuration:/home/ines/tiago_ws/install/pmb2_description:/home/ines/tiago_ws/install/pmb2_controller_configuration:/home/ines/tiago_ws/install/pmb2_robot:/home/ines/tiago_ws/install/pmb2_bringup:/home/ines/tiago_ws/install/pmb2_maps:/home/ines/tiago_ws/install/tiago_navigation:/home/ines/tiago_ws/install/tiago_rgbd_sensors:/home/ines/tiago_ws/install/tiago_laser_sensors:/home/ines/tiago_ws/install/tiago_exam_worlds:/home/ines/tiago_ws/install/tiago_exam:/home/ines/tiago_ws/install/tiago_2dnav:/home/ines/tiago_ws/install/pmb2_rgbd_sensors:/home/ines/tiago_ws/install/pmb2_navigation:/home/ines/tiago_ws/install/pmb2_laser_sensors:/home/ines/tiago_ws/install/pmb2_2dnav:/home/ines/tiago_ws/install/pal_navigation_cfg:/home/ines/tiago_ws/install/pal_navigation_cfg_bringup:/home/ines/tiago_ws/install/pal_navigation_cfg_params:/home/ines/tiago_ws/install/multirobot_map_merge:/home/ines/tiago_ws/install/explore_lite:/home/ines/test_ws/install/my_package:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/tiago_description -- -j8 -l8
+[2.198s] Built target ament_cmake_python_symlink_tiago_description
+[2.648s] running egg_info
+[2.649s] creating tiago_description.egg-info
+[2.650s] writing tiago_description.egg-info/PKG-INFO
+[2.650s] writing dependency_links to tiago_description.egg-info/dependency_links.txt
+[2.650s] writing top-level names to tiago_description.egg-info/top_level.txt
+[2.651s] writing manifest file 'tiago_description.egg-info/SOURCES.txt'
+[2.654s] reading manifest file 'tiago_description.egg-info/SOURCES.txt'
+[2.655s] writing manifest file 'tiago_description.egg-info/SOURCES.txt'
+[2.714s] Built target ament_cmake_python_build_tiago_description_egg
+[2.734s] Invoked command in '/home/ines/tiago_ws/build/tiago_description' returned '0': CMAKE_PREFIX_PATH=/home/ines/tiago_ws/install/tiago_controller_configuration:/home/ines/tiago_ws/install/pmb2_description:/home/ines/tiago_ws/install/pmb2_controller_configuration:/home/ines/tiago_ws/install/pmb2_robot:/home/ines/tiago_ws/install/pmb2_bringup:/home/ines/tiago_ws/install/pmb2_maps:/home/ines/tiago_ws/install/tiago_navigation:/home/ines/tiago_ws/install/tiago_rgbd_sensors:/home/ines/tiago_ws/install/tiago_laser_sensors:/home/ines/tiago_ws/install/tiago_exam_worlds:/home/ines/tiago_ws/install/tiago_exam:/home/ines/tiago_ws/install/tiago_2dnav:/home/ines/tiago_ws/install/pmb2_rgbd_sensors:/home/ines/tiago_ws/install/pmb2_navigation:/home/ines/tiago_ws/install/pmb2_laser_sensors:/home/ines/tiago_ws/install/pmb2_2dnav:/home/ines/tiago_ws/install/pal_navigation_cfg:/home/ines/tiago_ws/install/pal_navigation_cfg_bringup:/home/ines/tiago_ws/install/pal_navigation_cfg_params:/home/ines/tiago_ws/install/multirobot_map_merge:/home/ines/tiago_ws/install/explore_lite:/home/ines/test_ws/install/my_package:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/tiago_description -- -j8 -l8
+[2.779s] Invoking command in '/home/ines/tiago_ws/build/tiago_description': CMAKE_PREFIX_PATH=/home/ines/tiago_ws/install/tiago_controller_configuration:/home/ines/tiago_ws/install/pmb2_description:/home/ines/tiago_ws/install/pmb2_controller_configuration:/home/ines/tiago_ws/install/pmb2_robot:/home/ines/tiago_ws/install/pmb2_bringup:/home/ines/tiago_ws/install/pmb2_maps:/home/ines/tiago_ws/install/tiago_navigation:/home/ines/tiago_ws/install/tiago_rgbd_sensors:/home/ines/tiago_ws/install/tiago_laser_sensors:/home/ines/tiago_ws/install/tiago_exam_worlds:/home/ines/tiago_ws/install/tiago_exam:/home/ines/tiago_ws/install/tiago_2dnav:/home/ines/tiago_ws/install/pmb2_rgbd_sensors:/home/ines/tiago_ws/install/pmb2_navigation:/home/ines/tiago_ws/install/pmb2_laser_sensors:/home/ines/tiago_ws/install/pmb2_2dnav:/home/ines/tiago_ws/install/pal_navigation_cfg:/home/ines/tiago_ws/install/pal_navigation_cfg_bringup:/home/ines/tiago_ws/install/pal_navigation_cfg_params:/home/ines/tiago_ws/install/multirobot_map_merge:/home/ines/tiago_ws/install/explore_lite:/home/ines/test_ws/install/my_package:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/tiago_description
+[2.790s] -- Install configuration: ""
+[2.791s] -- Execute custom install script
+[2.792s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/environment/pythonpath.sh
+[2.807s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/environment/pythonpath.dsv
+[2.824s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/local/lib/python3.10/dist-packages/tiago_description-4.2.4-py3.10.egg-info/PKG-INFO
+[2.840s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/local/lib/python3.10/dist-packages/tiago_description-4.2.4-py3.10.egg-info/SOURCES.txt
+[2.857s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/local/lib/python3.10/dist-packages/tiago_description-4.2.4-py3.10.egg-info/dependency_links.txt
+[2.874s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/local/lib/python3.10/dist-packages/tiago_description-4.2.4-py3.10.egg-info/top_level.txt
+[2.890s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/local/lib/python3.10/dist-packages/tiago_description/__init__.py
+[2.906s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/local/lib/python3.10/dist-packages/tiago_description/tiago_launch_utils.py
+[2.923s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/gazebo/gazebo.urdf.xacro
+[2.944s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/launch/robot_state_publisher.launch.py
+[2.967s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/launch/show.launch.py
+[2.986s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_1.stl
+[3.005s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_1_collision.dae
+[3.028s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_1_color.png
+[3.048s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_1_normals.png
+[3.066s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_1_specular.png
+[3.085s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_2.stl
+[3.103s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_2_collision.dae
+[3.121s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_2_color.png
+[3.139s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_2_normals.png
+[3.159s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_2_specular.png
+[3.179s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_3.stl
+[3.197s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_3_collision.dae
+[3.217s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_3_color.png
+[3.233s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_3_normals.png
+[3.251s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_3_specular.png
+[3.268s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_4.stl
+[3.285s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_4_collision.dae
+[3.302s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_4_collision.stl
+[3.320s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_4_color.png
+[3.341s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_4_normals.png
+[3.362s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_4_specular.png
+[3.378s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_5-wrist-2010.stl
+[3.395s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_5-wrist-2017.stl
+[3.410s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_5_collision-wrist-2010.dae
+[3.425s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_5_collision-wrist-2017.dae
+[3.440s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_6-wrist-2010.stl
+[3.455s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_6-wrist-2017.stl
+[3.470s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_6_collision-wrist-2010.dae
+[3.484s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_6_collision-wrist-2017.dae
+[3.500s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_6_color.png
+[3.517s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_6_normals.png
+[3.532s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/arm/arm_6_specular.png
+[3.550s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/head/head_1.stl
+[3.567s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/head/head_1_collision.dae
+[3.583s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/head/head_2.stl
+[3.600s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/head/head_2_collision.dae
+[3.615s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/sensors/xtion_pro_live/xtion_pro_live.dae
+[3.631s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/sensors/xtion_pro_live/xtion_pro_live.png
+[3.646s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/torso/torso_fix.stl
+[3.662s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/torso/torso_lift_collision.dae
+[3.678s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/torso/torso_lift_collision_core.dae
+[3.694s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/torso/torso_lift_collision_neck.dae
+[3.711s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/torso/torso_lift_collision_shoulder.dae
+[3.729s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/torso/torso_lift_with_arm.stl
+[3.749s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/meshes/torso/torso_lift_without_arm.stl
+[3.765s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/robots/tiago.urdf.xacro
+[3.781s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/ros2_control/ros2_control.urdf.xacro
+[3.795s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/ros2_control/transmissions.urdf.xacro
+[3.810s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/urdf/arm/arm.ros2_control.xacro
+[3.824s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/urdf/arm/arm.urdf.xacro
+[3.839s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/urdf/arm/wrist.ros2_control.xacro
+[3.856s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/urdf/arm/wrist.urdf.xacro
+[3.871s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/urdf/calibration/calibration_constants.urdf.xacro
+[3.888s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/urdf/calibration/extrinsic_camera_calibration_constants.urdf.xacro
+[3.909s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/urdf/end_effector/end_effector.urdf.xacro
+[3.927s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/urdf/head/head.ros2_control.xacro
+[3.945s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/urdf/head/head.urdf.xacro
+[3.963s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/urdf/sensors/ftsensor.gazebo.xacro
+[3.980s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/urdf/sensors/ftsensor.urdf.xacro
+[3.997s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/urdf/sensors/openni.gazebo.xacro
+[4.014s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/urdf/sensors/orbbec_astra.urdf.xacro
+[4.031s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/urdf/sensors/sensors.ros2_control.xacro
+[4.047s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/urdf/sensors/xtion_pro_live.urdf.xacro
+[4.063s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/urdf/torso/torso.ros2_control.xacro
+[4.080s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/urdf/torso/torso.urdf.xacro
+[4.096s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/ament_index/resource_index/package_run_dependencies/tiago_description
+[4.112s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/ament_index/resource_index/parent_prefix_path/tiago_description
+[4.130s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/environment/ament_prefix_path.sh
+[4.146s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/environment/ament_prefix_path.dsv
+[4.164s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/environment/path.sh
+[4.183s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/environment/path.dsv
+[4.201s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/local_setup.bash
+[4.216s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/local_setup.sh
+[4.232s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/local_setup.zsh
+[4.251s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/local_setup.dsv
+[4.267s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/package.dsv
+[4.283s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/ament_index/resource_index/packages/tiago_description
+[4.299s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/cmake/tiago_descriptionConfig.cmake
+[4.314s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/cmake/tiago_descriptionConfig-version.cmake
+[4.333s] -- Symlinking: /home/ines/tiago_ws/install/tiago_description/share/tiago_description/package.xml
+[4.436s] Listing '/home/ines/tiago_ws/install/tiago_description/local/lib/python3.10/dist-packages/tiago_description'...
+[4.436s] Compiling '/home/ines/tiago_ws/install/tiago_description/local/lib/python3.10/dist-packages/tiago_description/__init__.py'...
+[4.436s] Compiling '/home/ines/tiago_ws/install/tiago_description/local/lib/python3.10/dist-packages/tiago_description/tiago_launch_utils.py'...
+[4.451s] Invoked command in '/home/ines/tiago_ws/build/tiago_description' returned '0': CMAKE_PREFIX_PATH=/home/ines/tiago_ws/install/tiago_controller_configuration:/home/ines/tiago_ws/install/pmb2_description:/home/ines/tiago_ws/install/pmb2_controller_configuration:/home/ines/tiago_ws/install/pmb2_robot:/home/ines/tiago_ws/install/pmb2_bringup:/home/ines/tiago_ws/install/pmb2_maps:/home/ines/tiago_ws/install/tiago_navigation:/home/ines/tiago_ws/install/tiago_rgbd_sensors:/home/ines/tiago_ws/install/tiago_laser_sensors:/home/ines/tiago_ws/install/tiago_exam_worlds:/home/ines/tiago_ws/install/tiago_exam:/home/ines/tiago_ws/install/tiago_2dnav:/home/ines/tiago_ws/install/pmb2_rgbd_sensors:/home/ines/tiago_ws/install/pmb2_navigation:/home/ines/tiago_ws/install/pmb2_laser_sensors:/home/ines/tiago_ws/install/pmb2_2dnav:/home/ines/tiago_ws/install/pal_navigation_cfg:/home/ines/tiago_ws/install/pal_navigation_cfg_bringup:/home/ines/tiago_ws/install/pal_navigation_cfg_params:/home/ines/tiago_ws/install/multirobot_map_merge:/home/ines/tiago_ws/install/explore_lite:/home/ines/test_ws/install/my_package:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/tiago_description

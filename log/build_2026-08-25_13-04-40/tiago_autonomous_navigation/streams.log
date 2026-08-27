@@ -1,0 +1,23 @@
+[2.513s] Invoking command in '/home/ines/tiago_ws/build/tiago_autonomous_navigation': PYTHONPATH=/home/ines/tiago_ws/build/tiago_autonomous_navigation/prefix_override:/home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ines/tiago_ws/build/tiago_autonomous_navigation/build --no-deps symlink_data
+[2.869s] running develop
+[2.903s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[2.903s]   warnings.warn(
+[3.194s] running egg_info
+[3.194s] writing tiago_autonomous_navigation.egg-info/PKG-INFO
+[3.195s] writing dependency_links to tiago_autonomous_navigation.egg-info/dependency_links.txt
+[3.195s] writing entry points to tiago_autonomous_navigation.egg-info/entry_points.txt
+[3.195s] writing requirements to tiago_autonomous_navigation.egg-info/requires.txt
+[3.195s] writing top-level names to tiago_autonomous_navigation.egg-info/top_level.txt
+[3.197s] reading manifest file 'tiago_autonomous_navigation.egg-info/SOURCES.txt'
+[3.198s] writing manifest file 'tiago_autonomous_navigation.egg-info/SOURCES.txt'
+[3.200s] running build_ext
+[3.200s] Creating /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/python3.10/site-packages/tiago-autonomous-navigation.egg-link (link to .)
+[3.201s] Installing localization script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation
+[3.202s] Installing localization_server script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation
+[3.202s] Installing navigation script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation
+[3.202s] Installing target_pose_server script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation
+[3.202s] Installing task_2_coordinator script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation
+[3.203s] 
+[3.203s] Installed /home/ines/tiago_ws/build/tiago_autonomous_navigation
+[3.203s] running symlink_data
+[3.250s] Invoked command in '/home/ines/tiago_ws/build/tiago_autonomous_navigation' returned '0': PYTHONPATH=/home/ines/tiago_ws/build/tiago_autonomous_navigation/prefix_override:/home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ines/tiago_ws/build/tiago_autonomous_navigation/build --no-deps symlink_data

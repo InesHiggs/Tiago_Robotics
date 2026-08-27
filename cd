@@ -1,0 +1,6 @@
+Task 1:
+	launches Gazebo, RViz, tucks the arm and starts the exploration part
+	No tiago_ws:
+	ros2 launch tiago_autonomous_exploration tiago_exploration.launch.py
+	Para salvar o mapa (tiago_ws):
+	ros2 run nav2_map_server map_saver_cli -f group10_map

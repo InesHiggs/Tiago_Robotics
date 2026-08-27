@@ -1,0 +1,1 @@
+/home/ines/tiago_ws/src/pymoveit2/examples/ex_allow_collisions.py

@@ -1,0 +1,62 @@
+[0.064s] Invoking command in '/home/ines/tiago_ws/build/pymoveit2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/pymoveit2 -- -j8 -l8
+[0.762s] Built target ament_cmake_python_symlink_pymoveit2
+[0.830s] running egg_info
+[0.832s] writing pymoveit2.egg-info/PKG-INFO
+[0.833s] writing dependency_links to pymoveit2.egg-info/dependency_links.txt
+[0.833s] writing top-level names to pymoveit2.egg-info/top_level.txt
+[0.838s] reading manifest file 'pymoveit2.egg-info/SOURCES.txt'
+[0.839s] writing manifest file 'pymoveit2.egg-info/SOURCES.txt'
+[0.931s] Built target ament_cmake_python_build_pymoveit2_egg
+[1.012s] Invoked command in '/home/ines/tiago_ws/build/pymoveit2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/pymoveit2 -- -j8 -l8
+[1.165s] Invoking command in '/home/ines/tiago_ws/build/pymoveit2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/pymoveit2
+[1.190s] -- Install configuration: ""
+[1.191s] -- Execute custom install script
+[1.191s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/share/pymoveit2/environment/pythonpath.sh
+[1.191s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/share/pymoveit2/environment/pythonpath.dsv
+[1.191s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2-4.2.0-py3.10.egg-info/PKG-INFO
+[1.192s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2-4.2.0-py3.10.egg-info/SOURCES.txt
+[1.192s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2-4.2.0-py3.10.egg-info/dependency_links.txt
+[1.193s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2-4.2.0-py3.10.egg-info/top_level.txt
+[1.193s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2/__init__.py
+[1.194s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2/gripper_command.py
+[1.196s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2/gripper_interface.py
+[1.197s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2/moveit2.py
+[1.197s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2/moveit2_gripper.py
+[1.197s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2/moveit2_servo.py
+[1.198s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2/robots/__init__.py
+[1.198s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2/robots/crane_x7.py
+[1.198s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2/robots/kinova.py
+[1.198s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2/robots/lbr.py
+[1.198s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2/robots/panda.py
+[1.199s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2/robots/phantomx_pincher.py
+[1.199s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2/robots/ur.py
+[1.199s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2/utils.py
+[1.199s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/lib/pymoveit2/ex_allow_collisions.py
+[1.200s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/lib/pymoveit2/ex_clear_planning_scene.py
+[1.200s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/lib/pymoveit2/ex_collision_mesh.py
+[1.200s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/lib/pymoveit2/ex_collision_primitive.py
+[1.200s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/lib/pymoveit2/ex_fk.py
+[1.201s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/lib/pymoveit2/ex_gripper.py
+[1.201s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/lib/pymoveit2/ex_ik.py
+[1.201s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/lib/pymoveit2/ex_joint_goal.py
+[1.201s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/lib/pymoveit2/ex_orientation_path_constraint.py
+[1.202s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/lib/pymoveit2/ex_pose_goal.py
+[1.202s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/lib/pymoveit2/ex_servo.py
+[1.203s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/share/ament_index/resource_index/package_run_dependencies/pymoveit2
+[1.203s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/share/ament_index/resource_index/parent_prefix_path/pymoveit2
+[1.203s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/share/pymoveit2/environment/ament_prefix_path.sh
+[1.203s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/share/pymoveit2/environment/ament_prefix_path.dsv
+[1.203s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/share/pymoveit2/environment/path.sh
+[1.204s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/share/pymoveit2/environment/path.dsv
+[1.204s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/share/pymoveit2/local_setup.bash
+[1.204s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/share/pymoveit2/local_setup.sh
+[1.204s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/share/pymoveit2/local_setup.zsh
+[1.204s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/share/pymoveit2/local_setup.dsv
+[1.204s] -- Symlinking: /home/ines/tiago_ws/install/pymoveit2/share/pymoveit2/package.dsv
+[1.231s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/share/ament_index/resource_index/packages/pymoveit2
+[1.232s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/share/pymoveit2/cmake/pymoveit2Config.cmake
+[1.232s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/share/pymoveit2/cmake/pymoveit2Config-version.cmake
+[1.232s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pymoveit2/share/pymoveit2/package.xml
+[1.345s] Listing '/home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2'...
+[1.346s] Listing '/home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages/pymoveit2/robots'...
+[2.083s] Invoked command in '/home/ines/tiago_ws/build/pymoveit2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/pymoveit2

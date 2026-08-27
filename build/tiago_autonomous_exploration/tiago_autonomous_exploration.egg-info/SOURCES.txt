@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+launch/tiago_exploration.launch.py
+resource/tiago_autonomous_exploration
+tiago_autonomous_exploration/__init__.py
+tiago_autonomous_exploration.egg-info/PKG-INFO
+tiago_autonomous_exploration.egg-info/SOURCES.txt
+tiago_autonomous_exploration.egg-info/dependency_links.txt
+tiago_autonomous_exploration.egg-info/entry_points.txt
+tiago_autonomous_exploration.egg-info/requires.txt
+tiago_autonomous_exploration.egg-info/top_level.txt
+tiago_autonomous_exploration.egg-info/zip-safe

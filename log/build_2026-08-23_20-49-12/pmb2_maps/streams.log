@@ -1,0 +1,34 @@
+[0.369s] Invoking command in '/home/ines/tiago_ws/build/pmb2_maps': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/pmb2_maps -- -j8 -l8
+[4.044s] Invoked command in '/home/ines/tiago_ws/build/pmb2_maps' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/pmb2_maps -- -j8 -l8
+[4.291s] Invoking command in '/home/ines/tiago_ws/build/pmb2_maps': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/pmb2_maps
+[4.386s] -- Install configuration: ""
+[4.397s] -- Execute custom install script
+[4.428s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/config/map.pgm
+[4.429s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/config/map.yaml
+[4.435s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/config/mmap.yaml
+[4.435s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/configurations/pal_office/map.pgm
+[4.435s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/configurations/pal_office/map.yaml
+[4.436s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/configurations/pal_office/mmap.yaml
+[4.436s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/configurations/small_office/map.bmp
+[4.436s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/configurations/small_office/map.bt
+[4.436s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/configurations/small_office/map.ot
+[4.437s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/configurations/small_office/map.pgm
+[4.479s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/configurations/small_office/map.yaml
+[4.480s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/configurations/small_office/mmap.yaml
+[4.480s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/configurations/small_office/transformation.yaml
+[4.480s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/ament_index/resource_index/package_run_dependencies/pmb2_maps
+[4.487s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/ament_index/resource_index/parent_prefix_path/pmb2_maps
+[4.490s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/environment/ament_prefix_path.sh
+[4.496s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/environment/ament_prefix_path.dsv
+[4.497s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/environment/path.sh
+[4.501s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/environment/path.dsv
+[4.502s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/local_setup.bash
+[4.502s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/local_setup.sh
+[4.503s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/local_setup.zsh
+[4.505s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/local_setup.dsv
+[4.507s] -- Symlinking: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/package.dsv
+[4.579s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/ament_index/resource_index/packages/pmb2_maps
+[4.580s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/cmake/pmb2_mapsConfig.cmake
+[4.581s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/cmake/pmb2_mapsConfig-version.cmake
+[4.581s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_maps/share/pmb2_maps/package.xml
+[4.588s] Invoked command in '/home/ines/tiago_ws/build/pmb2_maps' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/pmb2_maps

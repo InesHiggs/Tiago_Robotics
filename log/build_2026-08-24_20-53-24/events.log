@@ -1,0 +1,175 @@
+[0.000000] (-) TimerEvent: {}
+[0.004099] (-) JobUnselected: {'identifier': 'explore_lite'}
+[0.004415] (-) JobUnselected: {'identifier': 'multirobot_map_merge'}
+[0.004505] (-) JobUnselected: {'identifier': 'pal_navigation_cfg'}
+[0.004586] (-) JobUnselected: {'identifier': 'pal_navigation_cfg_bringup'}
+[0.004662] (-) JobUnselected: {'identifier': 'pal_navigation_cfg_params'}
+[0.004744] (-) JobUnselected: {'identifier': 'pmb2_2dnav'}
+[0.004850] (-) JobUnselected: {'identifier': 'pmb2_bringup'}
+[0.004944] (-) JobUnselected: {'identifier': 'pmb2_controller_configuration'}
+[0.005020] (-) JobUnselected: {'identifier': 'pmb2_description'}
+[0.005090] (-) JobUnselected: {'identifier': 'pmb2_laser_sensors'}
+[0.005151] (-) JobUnselected: {'identifier': 'pmb2_maps'}
+[0.005217] (-) JobUnselected: {'identifier': 'pmb2_navigation'}
+[0.005293] (-) JobUnselected: {'identifier': 'pmb2_robot'}
+[0.005364] (-) JobUnselected: {'identifier': 'pymoveit2'}
+[0.005432] (-) JobUnselected: {'identifier': 'tiago_2dnav'}
+[0.005503] (-) JobUnselected: {'identifier': 'tiago_autonomous_exploration'}
+[0.005576] (-) JobUnselected: {'identifier': 'tiago_controller_configuration'}
+[0.005648] (-) JobUnselected: {'identifier': 'tiago_exam'}
+[0.005719] (-) JobUnselected: {'identifier': 'tiago_exam_worlds'}
+[0.005788] (-) JobUnselected: {'identifier': 'tiago_laser_sensors'}
+[0.005892] (-) JobUnselected: {'identifier': 'tiago_navigation'}
+[0.006009] (-) JobUnselected: {'identifier': 'tiago_task2_interfaces'}
+[0.006101] (tiago_autonomous_navigation) JobQueued: {'identifier': 'tiago_autonomous_navigation', 'dependencies': OrderedDict([('tiago_task2_interfaces', '/home/ines/tiago_ws/install/tiago_task2_interfaces')])}
+[0.010103] (tiago_autonomous_navigation) JobStarted: {'identifier': 'tiago_autonomous_navigation'}
+[0.099397] (-) TimerEvent: {}
+[0.201863] (-) TimerEvent: {}
+[0.302762] (-) TimerEvent: {}
+[0.406749] (-) TimerEvent: {}
+[0.507479] (-) TimerEvent: {}
+[0.613577] (-) TimerEvent: {}
+[0.715750] (-) TimerEvent: {}
+[0.816586] (-) TimerEvent: {}
+[0.918945] (-) TimerEvent: {}
+[1.020376] (-) TimerEvent: {}
+[1.123253] (-) TimerEvent: {}
+[1.226981] (-) TimerEvent: {}
+[1.331306] (-) TimerEvent: {}
+[1.432797] (-) TimerEvent: {}
+[1.535183] (-) TimerEvent: {}
+[1.639507] (-) TimerEvent: {}
+[1.740334] (-) TimerEvent: {}
+[1.841987] (-) TimerEvent: {}
+[1.945161] (-) TimerEvent: {}
+[2.046602] (-) TimerEvent: {}
+[2.147792] (-) TimerEvent: {}
+[2.251101] (-) TimerEvent: {}
+[2.352146] (-) TimerEvent: {}
+[2.453159] (-) TimerEvent: {}
+[2.556149] (-) TimerEvent: {}
+[2.660065] (-) TimerEvent: {}
+[2.760858] (-) TimerEvent: {}
+[2.862418] (-) TimerEvent: {}
+[2.966739] (-) TimerEvent: {}
+[3.070319] (-) TimerEvent: {}
+[3.173057] (-) TimerEvent: {}
+[3.274057] (-) TimerEvent: {}
+[3.374977] (-) TimerEvent: {}
+[3.475674] (-) TimerEvent: {}
+[3.577852] (-) TimerEvent: {}
+[3.679010] (-) TimerEvent: {}
+[3.779626] (-) TimerEvent: {}
+[3.883991] (-) TimerEvent: {}
+[3.984592] (-) TimerEvent: {}
+[4.085369] (-) TimerEvent: {}
+[4.186883] (-) TimerEvent: {}
+[4.287658] (-) TimerEvent: {}
+[4.390626] (-) TimerEvent: {}
+[4.493267] (-) TimerEvent: {}
+[4.598122] (-) TimerEvent: {}
+[4.699579] (-) TimerEvent: {}
+[4.803113] (-) TimerEvent: {}
+[4.905778] (-) TimerEvent: {}
+[5.007316] (-) TimerEvent: {}
+[5.118647] (-) TimerEvent: {}
+[5.224405] (-) TimerEvent: {}
+[5.330157] (-) TimerEvent: {}
+[5.432969] (-) TimerEvent: {}
+[5.537391] (-) TimerEvent: {}
+[5.647192] (-) TimerEvent: {}
+[5.748141] (-) TimerEvent: {}
+[5.851175] (-) TimerEvent: {}
+[5.953303] (-) TimerEvent: {}
+[6.057358] (-) TimerEvent: {}
+[6.160383] (-) TimerEvent: {}
+[6.263215] (-) TimerEvent: {}
+[6.365336] (-) TimerEvent: {}
+[6.466126] (-) TimerEvent: {}
+[6.567299] (-) TimerEvent: {}
+[6.671442] (-) TimerEvent: {}
+[6.778926] (-) TimerEvent: {}
+[6.880804] (-) TimerEvent: {}
+[6.982631] (-) TimerEvent: {}
+[7.083931] (-) TimerEvent: {}
+[7.186171] (-) TimerEvent: {}
+[7.288192] (-) TimerEvent: {}
+[7.389787] (-) TimerEvent: {}
+[7.490808] (-) TimerEvent: {}
+[7.591788] (-) TimerEvent: {}
+[7.675938] (tiago_autonomous_navigation) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/ines/tiago_ws/build/tiago_autonomous_navigation/build', '--no-deps', 'symlink_data'], 'cwd': '/home/ines/tiago_ws/build/tiago_autonomous_navigation', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ines', 'LC_TIME': 'pt_PT.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ines/tiago_ws/install/tiago_task2_interfaces/lib:/home/ines/tiago_ws/install/multirobot_map_merge/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/ines', 'OLDPWD': '/home/ines/tiago_ws', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'pt_PT.UTF-8', 'MANAGERPID': '2301', 'LC_CTYPE': 'pt_PT.UTF-8', 'SYSTEMD_EXEC_PID': '2530', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '3285', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ines/tiago_ws/install:/home/ines/ros2_ws/install:/home/ines/test_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'ines', 'JOURNAL_STREAM': '8:12127', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ines', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/ines/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ines-VivoBook:@/tmp/.ICE-unix/2502,unix/ines-VivoBook:/tmp/.ICE-unix/2502', 'INVOCATION_ID': 'adf76c92dfdb4cefaa661110c2885fc1', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'pt_PT.UTF-8', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'pt_PT.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.0FUIU3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_task2_interfaces:/home/ines/tiago_ws/install/tiago_navigation:/home/ines/tiago_ws/install/tiago_laser_sensors:/home/ines/tiago_ws/install/tiago_exam_worlds:/home/ines/tiago_ws/install/tiago_exam:/home/ines/tiago_ws/install/tiago_controller_configuration:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/tiago_ws/install/tiago_2dnav:/home/ines/tiago_ws/install/pymoveit2:/home/ines/tiago_ws/install/pmb2_robot:/home/ines/tiago_ws/install/pmb2_rgbd_sensors:/home/ines/tiago_ws/install/pmb2_navigation:/home/ines/tiago_ws/install/pmb2_2dnav:/home/ines/tiago_ws/install/pmb2_maps:/home/ines/tiago_ws/install/pmb2_laser_sensors:/home/ines/tiago_ws/install/pmb2_bringup:/home/ines/tiago_ws/install/pmb2_description:/home/ines/tiago_ws/install/pmb2_controller_configuration:/home/ines/tiago_ws/install/pal_navigation_cfg:/home/ines/tiago_ws/install/pal_navigation_cfg_bringup:/home/ines/tiago_ws/install/pal_navigation_cfg_params:/home/ines/tiago_ws/install/multirobot_map_merge:/home/ines/tiago_ws/install/explore_lite:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/home/ines/test_ws/install/my_package:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'pt_PT.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:0c47c2f7-012e-4d89-a4c4-544d027d4525', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'pt_PT.UTF-8', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'pt_PT.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ines/tiago_ws/build/tiago_autonomous_navigation', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ines/tiago_ws/build/tiago_autonomous_navigation/prefix_override:/home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/python3.10/site-packages:/home/ines/tiago_ws/build/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/python3.10/site-packages:/home/ines/tiago_ws/install/tiago_task2_interfaces/local/lib/python3.10/dist-packages:/home/ines/tiago_ws/build/tiago_autonomous_exploration:/home/ines/tiago_ws/install/tiago_autonomous_exploration/lib/python3.10/site-packages:/home/ines/tiago_ws/install/pymoveit2/local/lib/python3.10/dist-packages:/home/ines/tiago_ws/install/pmb2_description/local/lib/python3.10/dist-packages:/home/ines/ros2_ws/build/scripts:/home/ines/ros2_ws/install/scripts/lib/python3.10/site-packages:/home/ines/ros2_ws/build/acrobat:/home/ines/ros2_ws/install/acrobat/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'pt_PT.UTF-8', 'LC_PAPER': 'pt_PT.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/ines/tiago_ws/install/tiago_task2_interfaces:/home/ines/tiago_ws/install/tiago_navigation:/home/ines/tiago_ws/install/tiago_laser_sensors:/home/ines/tiago_ws/install/tiago_exam_worlds:/home/ines/tiago_ws/install/tiago_exam:/home/ines/tiago_ws/install/tiago_controller_configuration:/home/ines/tiago_ws/install/tiago_2dnav:/home/ines/tiago_ws/install/pymoveit2:/home/ines/tiago_ws/install/pmb2_robot:/home/ines/tiago_ws/install/pmb2_rgbd_sensors:/home/ines/tiago_ws/install/pmb2_navigation:/home/ines/tiago_ws/install/pmb2_2dnav:/home/ines/tiago_ws/install/pmb2_maps:/home/ines/tiago_ws/install/pmb2_laser_sensors:/home/ines/tiago_ws/install/pmb2_bringup:/home/ines/tiago_ws/install/pmb2_description:/home/ines/tiago_ws/install/pmb2_controller_configuration:/home/ines/tiago_ws/install/pal_navigation_cfg:/home/ines/tiago_ws/install/pal_navigation_cfg_bringup:/home/ines/tiago_ws/install/pal_navigation_cfg_params:/home/ines/tiago_ws/install/multirobot_map_merge:/home/ines/tiago_ws/install/explore_lite:/home/ines/test_ws/install/my_package'}, 'shell': False}
+[7.697223] (-) TimerEvent: {}
+[7.800019] (-) TimerEvent: {}
+[7.904147] (-) TimerEvent: {}
+[8.004785] (-) TimerEvent: {}
+[8.109354] (-) TimerEvent: {}
+[8.211042] (-) TimerEvent: {}
+[8.313903] (-) TimerEvent: {}
+[8.414774] (-) TimerEvent: {}
+[8.517474] (-) TimerEvent: {}
+[8.620944] (-) TimerEvent: {}
+[8.721574] (-) TimerEvent: {}
+[8.822195] (-) TimerEvent: {}
+[8.922981] (-) TimerEvent: {}
+[9.031480] (-) TimerEvent: {}
+[9.132560] (-) TimerEvent: {}
+[9.233631] (-) TimerEvent: {}
+[9.336029] (-) TimerEvent: {}
+[9.436939] (-) TimerEvent: {}
+[9.541371] (-) TimerEvent: {}
+[9.646291] (-) TimerEvent: {}
+[9.748534] (-) TimerEvent: {}
+[9.850488] (-) TimerEvent: {}
+[9.951322] (-) TimerEvent: {}
+[10.054671] (-) TimerEvent: {}
+[10.157433] (-) TimerEvent: {}
+[10.248325] (tiago_autonomous_navigation) StdoutLine: {'line': b'running develop\n'}
+[10.251314] (tiago_autonomous_navigation) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[10.252028] (tiago_autonomous_navigation) StderrLine: {'line': b'  warnings.warn(\n'}
+[10.261011] (-) TimerEvent: {}
+[10.362329] (-) TimerEvent: {}
+[10.465184] (-) TimerEvent: {}
+[10.567706] (-) TimerEvent: {}
+[10.668997] (-) TimerEvent: {}
+[10.772154] (-) TimerEvent: {}
+[10.877059] (-) TimerEvent: {}
+[10.978361] (-) TimerEvent: {}
+[11.083917] (-) TimerEvent: {}
+[11.184878] (-) TimerEvent: {}
+[11.285889] (-) TimerEvent: {}
+[11.386572] (-) TimerEvent: {}
+[11.491106] (-) TimerEvent: {}
+[11.592062] (-) TimerEvent: {}
+[11.694670] (-) TimerEvent: {}
+[11.795984] (-) TimerEvent: {}
+[11.896939] (-) TimerEvent: {}
+[11.997766] (-) TimerEvent: {}
+[12.100657] (-) TimerEvent: {}
+[12.201911] (-) TimerEvent: {}
+[12.302945] (-) TimerEvent: {}
+[12.403875] (-) TimerEvent: {}
+[12.454673] (tiago_autonomous_navigation) StdoutLine: {'line': b'running egg_info\n'}
+[12.456769] (tiago_autonomous_navigation) StdoutLine: {'line': b'writing tiago_autonomous_navigation.egg-info/PKG-INFO\n'}
+[12.460367] (tiago_autonomous_navigation) StdoutLine: {'line': b'writing dependency_links to tiago_autonomous_navigation.egg-info/dependency_links.txt\n'}
+[12.461740] (tiago_autonomous_navigation) StdoutLine: {'line': b'writing entry points to tiago_autonomous_navigation.egg-info/entry_points.txt\n'}
+[12.462773] (tiago_autonomous_navigation) StdoutLine: {'line': b'writing requirements to tiago_autonomous_navigation.egg-info/requires.txt\n'}
+[12.463321] (tiago_autonomous_navigation) StdoutLine: {'line': b'writing top-level names to tiago_autonomous_navigation.egg-info/top_level.txt\n'}
+[12.489140] (tiago_autonomous_navigation) StdoutLine: {'line': b"reading manifest file 'tiago_autonomous_navigation.egg-info/SOURCES.txt'\n"}
+[12.499673] (tiago_autonomous_navigation) StdoutLine: {'line': b"writing manifest file 'tiago_autonomous_navigation.egg-info/SOURCES.txt'\n"}
+[12.504758] (-) TimerEvent: {}
+[12.517995] (tiago_autonomous_navigation) StdoutLine: {'line': b'running build_ext\n'}
+[12.518520] (tiago_autonomous_navigation) StdoutLine: {'line': b'Creating /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/python3.10/site-packages/tiago-autonomous-navigation.egg-link (link to .)\n'}
+[12.523111] (tiago_autonomous_navigation) StdoutLine: {'line': b'Installing localization script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation\n'}
+[12.523487] (tiago_autonomous_navigation) StdoutLine: {'line': b'Installing localization_server script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation\n'}
+[12.528526] (tiago_autonomous_navigation) StdoutLine: {'line': b'Installing navigation script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation\n'}
+[12.529314] (tiago_autonomous_navigation) StdoutLine: {'line': b'Installing target_pose_server script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation\n'}
+[12.529691] (tiago_autonomous_navigation) StdoutLine: {'line': b'Installing task_2_coordinator script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation\n'}
+[12.532624] (tiago_autonomous_navigation) StdoutLine: {'line': b'\n'}
+[12.533187] (tiago_autonomous_navigation) StdoutLine: {'line': b'Installed /home/ines/tiago_ws/build/tiago_autonomous_navigation\n'}
+[12.535488] (tiago_autonomous_navigation) StdoutLine: {'line': b'running symlink_data\n'}
+[12.608599] (-) TimerEvent: {}
+[12.709237] (-) TimerEvent: {}
+[12.753302] (tiago_autonomous_navigation) CommandEnded: {'returncode': 0}
+[12.819908] (-) TimerEvent: {}
+[12.853203] (tiago_autonomous_navigation) JobEnded: {'identifier': 'tiago_autonomous_navigation', 'rc': 0}
+[12.854468] (-) EventReactorShutdown: {}

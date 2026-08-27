@@ -1,0 +1,8 @@
+# Request: the ArUco marker ID and its pose as seen by the camera
+int32 marker_id
+geometry_msgs/PoseStamped pose_in_camera_frame
+---
+# Response: the same pose expressed in the map frame
+bool success
+string message
+geometry_msgs/PoseStamped pose_in_map_frame

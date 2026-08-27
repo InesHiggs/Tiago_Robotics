@@ -1,0 +1,21 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running egg_info
+writing tiago_autonomous_navigation.egg-info/PKG-INFO
+writing dependency_links to tiago_autonomous_navigation.egg-info/dependency_links.txt
+writing entry points to tiago_autonomous_navigation.egg-info/entry_points.txt
+writing requirements to tiago_autonomous_navigation.egg-info/requires.txt
+writing top-level names to tiago_autonomous_navigation.egg-info/top_level.txt
+reading manifest file 'tiago_autonomous_navigation.egg-info/SOURCES.txt'
+writing manifest file 'tiago_autonomous_navigation.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/python3.10/site-packages/tiago-autonomous-navigation.egg-link (link to .)
+Installing localization script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation
+Installing localization_server script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation
+Installing navigation script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation
+Installing target_pose_server script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation
+Installing task_2_coordinator script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation
+
+Installed /home/ines/tiago_ws/build/tiago_autonomous_navigation
+running symlink_data

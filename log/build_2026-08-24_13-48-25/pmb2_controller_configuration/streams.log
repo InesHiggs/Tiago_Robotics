@@ -1,0 +1,27 @@
+[0.448s] Invoking command in '/home/ines/tiago_ws/build/pmb2_controller_configuration': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/pmb2_controller_configuration -- -j8 -l8
+[2.894s] Invoked command in '/home/ines/tiago_ws/build/pmb2_controller_configuration' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/pmb2_controller_configuration -- -j8 -l8
+[3.152s] Invoking command in '/home/ines/tiago_ws/build/pmb2_controller_configuration': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/pmb2_controller_configuration
+[3.794s] -- Install configuration: ""
+[3.795s] -- Execute custom install script
+[3.796s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/config/gazebo_controller_manager_cfg.yaml
+[3.797s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/config/joint_state_broadcaster.yaml
+[3.798s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/config/mobile_base_controller.yaml
+[3.799s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/launch/default_controllers.launch.py
+[3.800s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/launch/joint_state_broadcaster.launch.py
+[3.800s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/launch/mobile_base_controller.launch.py
+[3.800s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/ament_index/resource_index/package_run_dependencies/pmb2_controller_configuration
+[3.801s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/ament_index/resource_index/parent_prefix_path/pmb2_controller_configuration
+[3.801s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/environment/ament_prefix_path.sh
+[3.801s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/environment/ament_prefix_path.dsv
+[3.801s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/environment/path.sh
+[3.803s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/environment/path.dsv
+[3.804s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/local_setup.bash
+[3.804s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/local_setup.sh
+[3.805s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/local_setup.zsh
+[3.805s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/local_setup.dsv
+[3.805s] -- Symlinking: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/package.dsv
+[3.852s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/ament_index/resource_index/packages/pmb2_controller_configuration
+[3.862s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/cmake/pmb2_controller_configurationConfig.cmake
+[3.863s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/cmake/pmb2_controller_configurationConfig-version.cmake
+[3.865s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_controller_configuration/share/pmb2_controller_configuration/package.xml
+[4.326s] Invoked command in '/home/ines/tiago_ws/build/pmb2_controller_configuration' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/pmb2_controller_configuration

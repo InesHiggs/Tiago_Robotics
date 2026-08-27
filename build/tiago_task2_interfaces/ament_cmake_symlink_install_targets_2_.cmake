@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ines/tiago_ws/build/tiago_task2_interfaces/rosidl_generator_py/tiago_task2_interfaces/tiago_task2_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" "TARGETS" "tiago_task2_interfaces__rosidl_typesupport_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/tiago_task2_interfaces")

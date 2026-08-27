@@ -1,0 +1,28 @@
+[1.722s] Invoking command in '/home/ines/tiago_ws/build/tiago_autonomous_navigation': PYTHONPATH=/home/ines/tiago_ws/build/tiago_autonomous_navigation/prefix_override:/home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ines/tiago_ws/build/tiago_autonomous_navigation/build --no-deps symlink_data
+[2.452s] running develop
+[2.453s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[2.453s]   warnings.warn(
+[2.879s] running egg_info
+[2.879s] creating tiago_autonomous_navigation.egg-info
+[2.880s] writing tiago_autonomous_navigation.egg-info/PKG-INFO
+[2.880s] writing dependency_links to tiago_autonomous_navigation.egg-info/dependency_links.txt
+[2.880s] writing entry points to tiago_autonomous_navigation.egg-info/entry_points.txt
+[2.880s] writing requirements to tiago_autonomous_navigation.egg-info/requires.txt
+[2.882s] writing top-level names to tiago_autonomous_navigation.egg-info/top_level.txt
+[2.882s] writing manifest file 'tiago_autonomous_navigation.egg-info/SOURCES.txt'
+[2.885s] reading manifest file 'tiago_autonomous_navigation.egg-info/SOURCES.txt'
+[2.886s] writing manifest file 'tiago_autonomous_navigation.egg-info/SOURCES.txt'
+[2.889s] running build_ext
+[2.890s] Creating /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/python3.10/site-packages/tiago-autonomous-navigation.egg-link (link to .)
+[2.894s] Installing localization script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation
+[2.894s] 
+[2.894s] Installed /home/ines/tiago_ws/build/tiago_autonomous_navigation
+[2.894s] running symlink_data
+[2.894s] creating /home/ines/tiago_ws/install/tiago_autonomous_navigation/share/ament_index
+[2.894s] creating /home/ines/tiago_ws/install/tiago_autonomous_navigation/share/ament_index/resource_index
+[2.895s] creating /home/ines/tiago_ws/install/tiago_autonomous_navigation/share/ament_index/resource_index/packages
+[2.896s] symbolically linking /home/ines/tiago_ws/build/tiago_autonomous_navigation/resource/tiago_autonomous_navigation -> /home/ines/tiago_ws/install/tiago_autonomous_navigation/share/ament_index/resource_index/packages
+[2.896s] symbolically linking /home/ines/tiago_ws/build/tiago_autonomous_navigation/package.xml -> /home/ines/tiago_ws/install/tiago_autonomous_navigation/share/tiago_autonomous_navigation
+[2.896s] creating /home/ines/tiago_ws/install/tiago_autonomous_navigation/share/tiago_autonomous_navigation/launch
+[2.897s] symbolically linking /home/ines/tiago_ws/build/tiago_autonomous_navigation/launch/autonomous_navigation.launch.py -> /home/ines/tiago_ws/install/tiago_autonomous_navigation/share/tiago_autonomous_navigation/launch
+[2.989s] Invoked command in '/home/ines/tiago_ws/build/tiago_autonomous_navigation' returned '0': PYTHONPATH=/home/ines/tiago_ws/build/tiago_autonomous_navigation/prefix_override:/home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ines/tiago_ws/build/tiago_autonomous_navigation/build --no-deps symlink_data

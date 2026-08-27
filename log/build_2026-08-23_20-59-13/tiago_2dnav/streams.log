@@ -1,0 +1,31 @@
+[0.072s] Invoking command in '/home/ines/tiago_ws/build/tiago_2dnav': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/tiago_2dnav -- -j8 -l8
+[0.278s] Invoked command in '/home/ines/tiago_ws/build/tiago_2dnav' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/tiago_2dnav -- -j8 -l8
+[0.490s] Invoking command in '/home/ines/tiago_ws/build/tiago_2dnav': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/tiago_2dnav
+[0.522s] -- Install configuration: ""
+[0.524s] -- Execute custom install script
+[0.526s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/config/rviz/advanced_navigation.rviz
+[0.527s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/config/rviz/navigation.rviz
+[0.528s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/launch/tiago_nav_bringup.launch.py
+[0.529s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/launch/tiago_nav_bringup.launch.py.backup
+[0.531s] -- Symlinking: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/launch/tiago_nav_bringup.launch.py.pre_unibo_patch
+[0.580s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/params/tiago_nav.yaml
+[0.581s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/params/tiago_nav_public_sim.yaml
+[0.581s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/params/tiago_nav_w_composition.yaml
+[0.582s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/params/tiago_remappings.yaml
+[0.582s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/params/tiago_remappings_sim.yaml
+[0.583s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/ament_index/resource_index/package_run_dependencies/tiago_2dnav
+[0.583s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/ament_index/resource_index/parent_prefix_path/tiago_2dnav
+[0.584s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/environment/ament_prefix_path.sh
+[0.585s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/environment/ament_prefix_path.dsv
+[0.585s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/environment/path.sh
+[0.586s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/environment/path.dsv
+[0.587s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/local_setup.bash
+[0.588s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/local_setup.sh
+[0.591s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/local_setup.zsh
+[0.592s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/local_setup.dsv
+[0.592s] -- Symlinking: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/package.dsv
+[0.652s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/ament_index/resource_index/packages/tiago_2dnav
+[0.652s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/cmake/tiago_2dnavConfig.cmake
+[0.653s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/cmake/tiago_2dnavConfig-version.cmake
+[0.655s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_2dnav/share/tiago_2dnav/package.xml
+[0.666s] Invoked command in '/home/ines/tiago_ws/build/tiago_2dnav' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/tiago_2dnav

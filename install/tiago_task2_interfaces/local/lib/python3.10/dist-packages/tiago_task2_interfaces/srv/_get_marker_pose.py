@@ -1,0 +1,1 @@
+/home/ines/tiago_ws/build/tiago_task2_interfaces/rosidl_generator_py/tiago_task2_interfaces/srv/_get_marker_pose.py

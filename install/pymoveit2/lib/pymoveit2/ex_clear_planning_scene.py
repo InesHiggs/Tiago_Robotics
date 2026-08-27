@@ -1,0 +1,1 @@
+/home/ines/tiago_ws/src/pymoveit2/examples/ex_clear_planning_scene.py

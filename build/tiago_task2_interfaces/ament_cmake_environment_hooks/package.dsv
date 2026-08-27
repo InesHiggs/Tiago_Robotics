@@ -1,0 +1,4 @@
+source;share/tiago_task2_interfaces/local_setup.bash
+source;share/tiago_task2_interfaces/local_setup.dsv
+source;share/tiago_task2_interfaces/local_setup.sh
+source;share/tiago_task2_interfaces/local_setup.zsh

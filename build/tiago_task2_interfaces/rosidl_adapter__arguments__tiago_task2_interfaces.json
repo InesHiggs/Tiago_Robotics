@@ -1,0 +1,7 @@
+{
+  "package_name": "tiago_task2_interfaces",
+  "non_idl_tuples": [
+    "/home/ines/tiago_ws/src/tiago_task2_interfaces:srv/GetMarkerPose.srv",
+    "/home/ines/tiago_ws/src/tiago_task2_interfaces:action/Localize.action"
+  ]
+}

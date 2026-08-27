@@ -1,0 +1,20 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_exam/lib/tiago_exam/tuck_arm.py
+-- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_exam/share/tiago_exam/launch/tiago_exam.launch.py
+-- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_exam/share/tiago_exam/launch/tiago_spawn.launch.py
+-- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_exam/share/ament_index/resource_index/package_run_dependencies/tiago_exam
+-- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_exam/share/ament_index/resource_index/parent_prefix_path/tiago_exam
+-- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_exam/share/tiago_exam/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_exam/share/tiago_exam/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_exam/share/tiago_exam/environment/path.sh
+-- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_exam/share/tiago_exam/environment/path.dsv
+-- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_exam/share/tiago_exam/local_setup.bash
+-- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_exam/share/tiago_exam/local_setup.sh
+-- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_exam/share/tiago_exam/local_setup.zsh
+-- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_exam/share/tiago_exam/local_setup.dsv
+-- Symlinking: /home/ines/tiago_ws/install/tiago_exam/share/tiago_exam/package.dsv
+-- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_exam/share/ament_index/resource_index/packages/tiago_exam
+-- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_exam/share/tiago_exam/cmake/tiago_examConfig.cmake
+-- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_exam/share/tiago_exam/cmake/tiago_examConfig-version.cmake
+-- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_exam/share/tiago_exam/package.xml

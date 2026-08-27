@@ -1,0 +1,24 @@
+[0.063s] Invoking command in '/home/ines/tiago_ws/build/pmb2_rgbd_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/pmb2_rgbd_sensors -- -j8 -l8
+[0.670s] Invoked command in '/home/ines/tiago_ws/build/pmb2_rgbd_sensors' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/pmb2_rgbd_sensors -- -j8 -l8
+[0.752s] Invoking command in '/home/ines/tiago_ws/build/pmb2_rgbd_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/pmb2_rgbd_sensors
+[0.791s] -- Install configuration: ""
+[0.795s] -- Execute custom install script
+[0.796s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/pmb2_rgbd_sensors/config/rgbd_analyzers.yaml
+[0.804s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/pmb2_rgbd_sensors/launch/rgbd.launch.py
+[0.810s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/pmb2_rgbd_sensors/launch/rgbd_sim.launch.py
+[0.813s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/ament_index/resource_index/package_run_dependencies/pmb2_rgbd_sensors
+[0.817s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/ament_index/resource_index/parent_prefix_path/pmb2_rgbd_sensors
+[0.817s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/pmb2_rgbd_sensors/environment/ament_prefix_path.sh
+[0.817s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/pmb2_rgbd_sensors/environment/ament_prefix_path.dsv
+[0.818s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/pmb2_rgbd_sensors/environment/path.sh
+[0.818s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/pmb2_rgbd_sensors/environment/path.dsv
+[0.819s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/pmb2_rgbd_sensors/local_setup.bash
+[0.822s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/pmb2_rgbd_sensors/local_setup.sh
+[0.829s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/pmb2_rgbd_sensors/local_setup.zsh
+[0.829s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/pmb2_rgbd_sensors/local_setup.dsv
+[0.829s] -- Symlinking: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/pmb2_rgbd_sensors/package.dsv
+[0.836s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/ament_index/resource_index/packages/pmb2_rgbd_sensors
+[0.836s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/pmb2_rgbd_sensors/cmake/pmb2_rgbd_sensorsConfig.cmake
+[0.837s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/pmb2_rgbd_sensors/cmake/pmb2_rgbd_sensorsConfig-version.cmake
+[0.837s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_rgbd_sensors/share/pmb2_rgbd_sensors/package.xml
+[0.878s] Invoked command in '/home/ines/tiago_ws/build/pmb2_rgbd_sensors' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/pmb2_rgbd_sensors

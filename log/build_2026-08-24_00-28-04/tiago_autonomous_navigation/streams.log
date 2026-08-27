@@ -1,0 +1,19 @@
+[8.271s] Invoking command in '/home/ines/tiago_ws/build/tiago_autonomous_navigation': PYTHONPATH=/home/ines/tiago_ws/build/tiago_autonomous_navigation/prefix_override:/home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ines/tiago_ws/build/tiago_autonomous_navigation/build --no-deps symlink_data
+[9.569s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[9.569s]   warnings.warn(
+[9.569s] running develop
+[10.361s] running egg_info
+[10.361s] writing tiago_autonomous_navigation.egg-info/PKG-INFO
+[10.362s] writing dependency_links to tiago_autonomous_navigation.egg-info/dependency_links.txt
+[10.362s] writing entry points to tiago_autonomous_navigation.egg-info/entry_points.txt
+[10.363s] writing requirements to tiago_autonomous_navigation.egg-info/requires.txt
+[10.363s] writing top-level names to tiago_autonomous_navigation.egg-info/top_level.txt
+[10.401s] reading manifest file 'tiago_autonomous_navigation.egg-info/SOURCES.txt'
+[10.403s] writing manifest file 'tiago_autonomous_navigation.egg-info/SOURCES.txt'
+[10.408s] running build_ext
+[10.408s] Creating /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/python3.10/site-packages/tiago-autonomous-navigation.egg-link (link to .)
+[10.411s] Installing localization script to /home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/tiago_autonomous_navigation
+[10.411s] 
+[10.412s] Installed /home/ines/tiago_ws/build/tiago_autonomous_navigation
+[10.412s] running symlink_data
+[10.515s] Invoked command in '/home/ines/tiago_ws/build/tiago_autonomous_navigation' returned '0': PYTHONPATH=/home/ines/tiago_ws/build/tiago_autonomous_navigation/prefix_override:/home/ines/tiago_ws/install/tiago_autonomous_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ines/tiago_ws/build/tiago_autonomous_navigation/build --no-deps symlink_data

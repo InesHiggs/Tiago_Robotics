@@ -1,0 +1,114 @@
+[0.200s] Invoking command in '/home/ines/tiago_ws/build/pmb2_description': CMAKE_PREFIX_PATH=/home/ines/tiago_ws/install/pmb2_controller_configuration:/home/ines/tiago_ws/install/pmb2_robot:/home/ines/tiago_ws/install/pmb2_bringup:/home/ines/tiago_ws/install/pmb2_description:/home/ines/tiago_ws/install/pmb2_maps:/home/ines/tiago_ws/install/tiago_navigation:/home/ines/tiago_ws/install/tiago_rgbd_sensors:/home/ines/tiago_ws/install/tiago_laser_sensors:/home/ines/tiago_ws/install/tiago_exam_worlds:/home/ines/tiago_ws/install/tiago_exam:/home/ines/tiago_ws/install/tiago_controller_configuration:/home/ines/tiago_ws/install/tiago_2dnav:/home/ines/tiago_ws/install/pmb2_rgbd_sensors:/home/ines/tiago_ws/install/pmb2_navigation:/home/ines/tiago_ws/install/pmb2_laser_sensors:/home/ines/tiago_ws/install/pmb2_2dnav:/home/ines/tiago_ws/install/pal_navigation_cfg:/home/ines/tiago_ws/install/pal_navigation_cfg_bringup:/home/ines/tiago_ws/install/pal_navigation_cfg_params:/home/ines/tiago_ws/install/multirobot_map_merge:/home/ines/tiago_ws/install/explore_lite:/home/ines/test_ws/install/my_package:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/pmb2_description -- -j8 -l8
+[0.383s] Built target ament_cmake_python_symlink_pmb2_description
+[1.309s] running egg_info
+[1.315s] writing pmb2_description.egg-info/PKG-INFO
+[1.315s] writing dependency_links to pmb2_description.egg-info/dependency_links.txt
+[1.315s] writing top-level names to pmb2_description.egg-info/top_level.txt
+[1.316s] reading manifest file 'pmb2_description.egg-info/SOURCES.txt'
+[1.317s] writing manifest file 'pmb2_description.egg-info/SOURCES.txt'
+[1.437s] Built target ament_cmake_python_build_pmb2_description_egg
+[1.512s] Invoked command in '/home/ines/tiago_ws/build/pmb2_description' returned '0': CMAKE_PREFIX_PATH=/home/ines/tiago_ws/install/pmb2_controller_configuration:/home/ines/tiago_ws/install/pmb2_robot:/home/ines/tiago_ws/install/pmb2_bringup:/home/ines/tiago_ws/install/pmb2_description:/home/ines/tiago_ws/install/pmb2_maps:/home/ines/tiago_ws/install/tiago_navigation:/home/ines/tiago_ws/install/tiago_rgbd_sensors:/home/ines/tiago_ws/install/tiago_laser_sensors:/home/ines/tiago_ws/install/tiago_exam_worlds:/home/ines/tiago_ws/install/tiago_exam:/home/ines/tiago_ws/install/tiago_controller_configuration:/home/ines/tiago_ws/install/tiago_2dnav:/home/ines/tiago_ws/install/pmb2_rgbd_sensors:/home/ines/tiago_ws/install/pmb2_navigation:/home/ines/tiago_ws/install/pmb2_laser_sensors:/home/ines/tiago_ws/install/pmb2_2dnav:/home/ines/tiago_ws/install/pal_navigation_cfg:/home/ines/tiago_ws/install/pal_navigation_cfg_bringup:/home/ines/tiago_ws/install/pal_navigation_cfg_params:/home/ines/tiago_ws/install/multirobot_map_merge:/home/ines/tiago_ws/install/explore_lite:/home/ines/test_ws/install/my_package:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/pmb2_description -- -j8 -l8
+[1.584s] Invoking command in '/home/ines/tiago_ws/build/pmb2_description': CMAKE_PREFIX_PATH=/home/ines/tiago_ws/install/pmb2_controller_configuration:/home/ines/tiago_ws/install/pmb2_robot:/home/ines/tiago_ws/install/pmb2_bringup:/home/ines/tiago_ws/install/pmb2_description:/home/ines/tiago_ws/install/pmb2_maps:/home/ines/tiago_ws/install/tiago_navigation:/home/ines/tiago_ws/install/tiago_rgbd_sensors:/home/ines/tiago_ws/install/tiago_laser_sensors:/home/ines/tiago_ws/install/tiago_exam_worlds:/home/ines/tiago_ws/install/tiago_exam:/home/ines/tiago_ws/install/tiago_controller_configuration:/home/ines/tiago_ws/install/tiago_2dnav:/home/ines/tiago_ws/install/pmb2_rgbd_sensors:/home/ines/tiago_ws/install/pmb2_navigation:/home/ines/tiago_ws/install/pmb2_laser_sensors:/home/ines/tiago_ws/install/pmb2_2dnav:/home/ines/tiago_ws/install/pal_navigation_cfg:/home/ines/tiago_ws/install/pal_navigation_cfg_bringup:/home/ines/tiago_ws/install/pal_navigation_cfg_params:/home/ines/tiago_ws/install/multirobot_map_merge:/home/ines/tiago_ws/install/explore_lite:/home/ines/test_ws/install/my_package:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/pmb2_description
+[1.602s] -- Install configuration: ""
+[1.603s] -- Execute custom install script
+[1.603s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/environment/pythonpath.sh
+[1.603s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/environment/pythonpath.dsv
+[1.610s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/local/lib/python3.10/dist-packages/pmb2_description-5.0.16-py3.10.egg-info/PKG-INFO
+[1.610s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/local/lib/python3.10/dist-packages/pmb2_description-5.0.16-py3.10.egg-info/SOURCES.txt
+[1.610s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/local/lib/python3.10/dist-packages/pmb2_description-5.0.16-py3.10.egg-info/dependency_links.txt
+[1.610s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/local/lib/python3.10/dist-packages/pmb2_description-5.0.16-py3.10.egg-info/top_level.txt
+[1.611s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/local/lib/python3.10/dist-packages/pmb2_description/__init__.py
+[1.611s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/config/joint_limits.yaml
+[1.613s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/gazebo/gazebo.urdf.xacro
+[1.613s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/launch/robot_state_publisher.launch.py
+[1.613s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/launch/show.launch.py
+[1.615s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/Media/materials/scripts/markers.material
+[1.620s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/Media/materials/textures/aruco-26_8cm.png
+[1.620s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/Media/materials/textures/aruco-582_8cm.png
+[1.620s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/Media/materials/textures/pal_logo_1_7cm.jpg
+[1.620s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/Media/materials/textures/pal_logo_2_7cm.jpg
+[1.620s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/Media/materials/textures/pal_logo_3_7cm.jpg
+[1.620s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/base/base.stl
+[1.620s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/base/base_collision.dae
+[1.621s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/base/base_ring.stl
+[1.621s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/base/high_resolution/base.stl
+[1.621s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/base/high_resolution/base_collision.stl
+[1.621s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/cameras_add_on/cameras_add_on.stl
+[1.621s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/cameras_add_on/cameras_add_on_collision.stl
+[1.622s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/dock/dock.stl
+[1.622s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/dock/dock_collision.stl
+[1.622s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/objects/antenna.stl
+[1.622s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/objects/cover.stl
+[1.622s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/objects/high_resolution/cover.stl
+[1.623s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/sensors/bumper.stl
+[1.623s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/sensors/bumper_collision.stl
+[1.623s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/sensors/elp_camera.stl
+[1.623s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/sensors/high_resolution/bumper.stl
+[1.623s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/sensors/high_resolution/hokuyo_urg_04lx_ug01.stl
+[1.626s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/sensors/high_resolution/sick_tim551.stl
+[1.626s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/sensors/high_resolution/srf05.stl
+[1.626s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/sensors/high_resolution/xtion_pro_live.stl
+[1.626s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/sensors/hokuyo_urg_04lx_ug01.stl
+[1.626s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/sensors/sick_tim551.stl
+[1.626s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/sensors/srf05.stl
+[1.627s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/sensors/structure_sensor.stl
+[1.627s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/sensors/xtion_pro_live.dae
+[1.627s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/wheels/caster_1.stl
+[1.628s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/wheels/caster_2.stl
+[1.630s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/wheels/high_resolution/caster_1.stl
+[1.630s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/wheels/high_resolution/caster_2.stl
+[1.631s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/wheels/high_resolution/wheel.stl
+[1.631s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/meshes/wheels/wheel.stl
+[1.632s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/robots/pmb2.urdf.xacro
+[1.632s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/ros2_control/ros2_control.urdf.xacro
+[1.632s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/base/base.urdf.xacro
+[1.632s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/base/base_sensors.urdf.xacro
+[1.632s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/base/footprint.yaml
+[1.633s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/cameras_add_on/cameras_add_on.urdf.xacro
+[1.633s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/deg_to_rad.xacro
+[1.633s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/dock/dock.urdf.xacro
+[1.633s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/materials.urdf.xacro
+[1.634s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/objects/antenna.urdf.xacro
+[1.635s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/objects/cover.urdf.xacro
+[1.636s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/bumper.gazebo.xacro
+[1.637s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/bumper.urdf.xacro
+[1.638s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/courier.urdf.xacro
+[1.639s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/elp_rgb.gazebo.xacro
+[1.640s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/elp_rgb.urdf.xacro
+[1.640s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/hokuyo_urg_04lx_ug01_laser.gazebo.xacro
+[1.640s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/hokuyo_urg_04lx_ug01_laser.urdf.xacro
+[1.641s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/imu.urdf.xacro
+[1.642s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/microphone.urdf.xacro
+[1.642s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/range.gazebo.xacro
+[1.642s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/range.urdf.xacro
+[1.643s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/sensors.ros2_control.xacro
+[1.643s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/sick_tim551_laser.gazebo.xacro
+[1.643s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/sick_tim551_laser.urdf.xacro
+[1.643s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/sick_tim561_laser.gazebo.xacro
+[1.643s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/sick_tim561_laser.urdf.xacro
+[1.643s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/sick_tim571_laser.gazebo.xacro
+[1.643s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/sick_tim571_laser.urdf.xacro
+[1.643s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/structure_sensor.gazebo.xacro
+[1.644s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/sensors/structure_sensor.urdf.xacro
+[1.644s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/wheels/caster.gazebo.xacro
+[1.644s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/wheels/caster.urdf.xacro
+[1.644s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/wheels/wheel.gazebo.xacro
+[1.644s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/wheels/wheel.ros2_control.xacro
+[1.644s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/urdf/wheels/wheel.urdf.xacro
+[1.644s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/ament_index/resource_index/package_run_dependencies/pmb2_description
+[1.644s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/ament_index/resource_index/parent_prefix_path/pmb2_description
+[1.645s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/environment/ament_prefix_path.sh
+[1.645s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/environment/ament_prefix_path.dsv
+[1.645s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/environment/path.sh
+[1.646s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/environment/path.dsv
+[1.646s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/local_setup.bash
+[1.646s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/local_setup.sh
+[1.647s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/local_setup.zsh
+[1.647s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/local_setup.dsv
+[1.647s] -- Symlinking: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/package.dsv
+[1.666s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/ament_index/resource_index/packages/pmb2_description
+[1.667s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/cmake/pmb2_descriptionConfig.cmake
+[1.667s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/cmake/pmb2_descriptionConfig-version.cmake
+[1.667s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pmb2_description/share/pmb2_description/package.xml
+[1.754s] Listing '/home/ines/tiago_ws/install/pmb2_description/local/lib/python3.10/dist-packages/pmb2_description'...
+[1.776s] Invoked command in '/home/ines/tiago_ws/build/pmb2_description' returned '0': CMAKE_PREFIX_PATH=/home/ines/tiago_ws/install/pmb2_controller_configuration:/home/ines/tiago_ws/install/pmb2_robot:/home/ines/tiago_ws/install/pmb2_bringup:/home/ines/tiago_ws/install/pmb2_description:/home/ines/tiago_ws/install/pmb2_maps:/home/ines/tiago_ws/install/tiago_navigation:/home/ines/tiago_ws/install/tiago_rgbd_sensors:/home/ines/tiago_ws/install/tiago_laser_sensors:/home/ines/tiago_ws/install/tiago_exam_worlds:/home/ines/tiago_ws/install/tiago_exam:/home/ines/tiago_ws/install/tiago_controller_configuration:/home/ines/tiago_ws/install/tiago_2dnav:/home/ines/tiago_ws/install/pmb2_rgbd_sensors:/home/ines/tiago_ws/install/pmb2_navigation:/home/ines/tiago_ws/install/pmb2_laser_sensors:/home/ines/tiago_ws/install/pmb2_2dnav:/home/ines/tiago_ws/install/pal_navigation_cfg:/home/ines/tiago_ws/install/pal_navigation_cfg_bringup:/home/ines/tiago_ws/install/pal_navigation_cfg_params:/home/ines/tiago_ws/install/multirobot_map_merge:/home/ines/tiago_ws/install/explore_lite:/home/ines/test_ws/install/my_package:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/pmb2_description

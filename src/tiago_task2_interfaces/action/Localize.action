@@ -1,0 +1,7 @@
+# Goal - empty, just trigger localization
+---
+# Result
+bool success
+---
+# Feedback
+float64 current_covariance

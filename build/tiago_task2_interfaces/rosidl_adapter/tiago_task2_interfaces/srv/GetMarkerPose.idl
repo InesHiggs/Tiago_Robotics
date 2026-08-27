@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from tiago_task2_interfaces/srv/GetMarkerPose.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseStamped.idl"
+
+module tiago_task2_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "Request: the ArUco marker ID and its pose as seen by the camera")
+    struct GetMarkerPose_Request {
+      int32 marker_id;
+
+      geometry_msgs::msg::PoseStamped pose_in_camera_frame;
+    };
+    @verbatim (language="comment", text=
+      "Response: the same pose expressed in the map frame")
+    struct GetMarkerPose_Response {
+      boolean success;
+
+      string message;
+
+      geometry_msgs::msg::PoseStamped pose_in_map_frame;
+    };
+  };
+};

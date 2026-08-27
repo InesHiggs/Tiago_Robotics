@@ -1,0 +1,18 @@
+[1.483s] Invoking command in '/home/ines/tiago_ws/build/tiago_autonomous_exploration': PYTHONPATH=/home/ines/tiago_ws/build/tiago_autonomous_exploration/prefix_override:/home/ines/tiago_ws/install/tiago_autonomous_exploration/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ines/tiago_ws/build/tiago_autonomous_exploration/build --no-deps symlink_data
+[1.929s] running develop
+[1.930s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.930s]   warnings.warn(
+[2.260s] running egg_info
+[2.260s] writing tiago_autonomous_exploration.egg-info/PKG-INFO
+[2.260s] writing dependency_links to tiago_autonomous_exploration.egg-info/dependency_links.txt
+[2.260s] writing entry points to tiago_autonomous_exploration.egg-info/entry_points.txt
+[2.261s] writing requirements to tiago_autonomous_exploration.egg-info/requires.txt
+[2.261s] writing top-level names to tiago_autonomous_exploration.egg-info/top_level.txt
+[2.263s] reading manifest file 'tiago_autonomous_exploration.egg-info/SOURCES.txt'
+[2.264s] writing manifest file 'tiago_autonomous_exploration.egg-info/SOURCES.txt'
+[2.266s] running build_ext
+[2.266s] Creating /home/ines/tiago_ws/install/tiago_autonomous_exploration/lib/python3.10/site-packages/tiago-autonomous-exploration.egg-link (link to .)
+[2.267s] 
+[2.267s] Installed /home/ines/tiago_ws/build/tiago_autonomous_exploration
+[2.267s] running symlink_data
+[2.318s] Invoked command in '/home/ines/tiago_ws/build/tiago_autonomous_exploration' returned '0': PYTHONPATH=/home/ines/tiago_ws/build/tiago_autonomous_exploration/prefix_override:/home/ines/tiago_ws/install/tiago_autonomous_exploration/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ines/tiago_ws/build/tiago_autonomous_exploration/build --no-deps symlink_data

@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from tiago_task2_interfaces/action/Localize.action
+// generated code does not contain a copyright notice
+
+
+module tiago_task2_interfaces {
+  module action {
+    @verbatim (language="comment", text=
+      "Goal - empty, just trigger localization")
+    struct Localize_Goal {
+      uint8 structure_needs_at_least_one_member;
+    };
+    @verbatim (language="comment", text=
+      "Result")
+    struct Localize_Result {
+      boolean success;
+    };
+    @verbatim (language="comment", text=
+      "Feedback")
+    struct Localize_Feedback {
+      double current_covariance;
+    };
+  };
+};

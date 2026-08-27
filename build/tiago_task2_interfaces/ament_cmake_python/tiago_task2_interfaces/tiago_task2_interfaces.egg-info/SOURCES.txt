@@ -1,0 +1,6 @@
+setup.py
+tiago_task2_interfaces/__init__.py
+tiago_task2_interfaces.egg-info/PKG-INFO
+tiago_task2_interfaces.egg-info/SOURCES.txt
+tiago_task2_interfaces.egg-info/dependency_links.txt
+tiago_task2_interfaces.egg-info/top_level.txt

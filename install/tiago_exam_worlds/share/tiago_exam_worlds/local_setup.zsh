@@ -1,0 +1,1 @@
+/home/ines/tiago_ws/build/tiago_exam_worlds/ament_cmake_environment_hooks/local_setup.zsh

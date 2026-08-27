@@ -1,0 +1,31 @@
+[3.681s] Invoking command in '/home/ines/tiago_ws/build/tiago_controller_configuration': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/tiago_controller_configuration -- -j8 -l8
+[4.214s] Invoked command in '/home/ines/tiago_ws/build/tiago_controller_configuration' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/tiago_controller_configuration -- -j8 -l8
+[4.664s] Invoking command in '/home/ines/tiago_ws/build/tiago_controller_configuration': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/tiago_controller_configuration
+[4.722s] -- Install configuration: ""
+[4.723s] -- Execute custom install script
+[4.723s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/config/arm_controller.yaml
+[4.723s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/config/ft_sensor_controller.yaml
+[4.728s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/config/gravity_compensation_controller_ilm.yaml
+[4.730s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/config/gravity_compensation_controller_parker.yaml
+[4.730s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/config/head_controller.yaml
+[4.731s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/config/joint_state_broadcaster.yaml
+[4.735s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/config/torso_controller.yaml
+[4.741s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/launch/default_controllers.launch.py
+[4.742s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/launch/gravity_compensation_controller.launch.py
+[4.742s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/launch/gravity_compensation_controller.launch.py.bak
+[4.743s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/ament_index/resource_index/package_run_dependencies/tiago_controller_configuration
+[4.743s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/ament_index/resource_index/parent_prefix_path/tiago_controller_configuration
+[4.748s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/environment/ament_prefix_path.sh
+[4.752s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/environment/ament_prefix_path.dsv
+[4.753s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/environment/path.sh
+[4.753s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/environment/path.dsv
+[4.771s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/local_setup.bash
+[4.772s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/local_setup.sh
+[4.772s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/local_setup.zsh
+[4.773s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/local_setup.dsv
+[4.781s] -- Symlinking: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/package.dsv
+[4.860s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/ament_index/resource_index/packages/tiago_controller_configuration
+[4.863s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/cmake/tiago_controller_configurationConfig.cmake
+[4.863s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/cmake/tiago_controller_configurationConfig-version.cmake
+[4.864s] -- Up-to-date symlink: /home/ines/tiago_ws/install/tiago_controller_configuration/share/tiago_controller_configuration/package.xml
+[4.953s] Invoked command in '/home/ines/tiago_ws/build/tiago_controller_configuration' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/tiago_controller_configuration

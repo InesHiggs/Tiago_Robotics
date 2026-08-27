@@ -1,0 +1,45 @@
+[0.323s] Invoking command in '/home/ines/tiago_ws/build/multirobot_map_merge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/multirobot_map_merge -- -j8 -l8
+[3.804s] [ 41%] Built target combine_grids
+[3.804s] [ 50%] Built target gtest
+[3.805s] [ 66%] Built target gtest_main
+[3.805s] [ 83%] Built target test_merging_pipeline
+[3.806s] [100%] Built target map_merge
+[3.897s] Invoked command in '/home/ines/tiago_ws/build/multirobot_map_merge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/multirobot_map_merge -- -j8 -l8
+[4.340s] Invoking command in '/home/ines/tiago_ws/build/multirobot_map_merge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/multirobot_map_merge
+[4.373s] -- Install configuration: ""
+[4.373s] -- Execute custom install script
+[4.373s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/include/map_merge//map_merge.h
+[4.374s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/include/map_merge//ros1_names.hpp
+[4.378s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/from_map_server.launch.py
+[4.379s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/map_merge.launch.py
+[4.380s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/map_merge.rviz
+[4.380s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/bringup_launch.py
+[4.381s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/config/nav2_multirobot_params_1.yaml
+[4.381s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/config/nav2_multirobot_params_2.yaml
+[4.382s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/multi_tb3_simulation_launch.py
+[4.382s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/slam_toolbox.py
+[4.383s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/tb3_simulation_launch.py
+[4.383s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/launch/tb3_simulation/worlds/world_only.model
+[4.385s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/config/params.yaml
+[4.386s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/lib/multirobot_map_merge/map_merge
+[4.387s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/library_path.sh
+[4.387s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/library_path.dsv
+[4.407s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/ament_index/resource_index/package_run_dependencies/multirobot_map_merge
+[4.407s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/ament_index/resource_index/parent_prefix_path/multirobot_map_merge
+[4.408s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/ament_prefix_path.sh
+[4.408s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/ament_prefix_path.dsv
+[4.408s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/path.sh
+[4.414s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/environment/path.dsv
+[4.415s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/local_setup.bash
+[4.415s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/local_setup.sh
+[4.415s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/local_setup.zsh
+[4.416s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/local_setup.dsv
+[4.416s] -- Symlinking: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/package.dsv
+[4.434s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/ament_index/resource_index/packages/multirobot_map_merge
+[4.435s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.438s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/cmake/ament_cmake_export_libraries-extras.cmake
+[4.441s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/cmake/multirobot_map_mergeConfig.cmake
+[4.442s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/cmake/multirobot_map_mergeConfig-version.cmake
+[4.442s] -- Up-to-date symlink: /home/ines/tiago_ws/install/multirobot_map_merge/share/multirobot_map_merge/package.xml
+[4.443s] -- Up-to-date: /home/ines/tiago_ws/install/multirobot_map_merge/lib/libcombine_grids.a
+[4.661s] Invoked command in '/home/ines/tiago_ws/build/multirobot_map_merge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/multirobot_map_merge

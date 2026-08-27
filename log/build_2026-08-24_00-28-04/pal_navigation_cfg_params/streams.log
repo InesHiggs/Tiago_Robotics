@@ -1,0 +1,25 @@
+[0.267s] Invoking command in '/home/ines/tiago_ws/build/pal_navigation_cfg_params': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/pal_navigation_cfg_params -- -j8 -l8
+[2.737s] Invoked command in '/home/ines/tiago_ws/build/pal_navigation_cfg_params' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --build /home/ines/tiago_ws/build/pal_navigation_cfg_params -- -j8 -l8
+[2.898s] Invoking command in '/home/ines/tiago_ws/build/pal_navigation_cfg_params': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/pal_navigation_cfg_params
+[2.945s] -- Install configuration: ""
+[2.959s] -- Execute custom install script
+[2.962s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/pal_navigation_cfg_params/params/omni_base_nav2.yaml
+[2.963s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/pal_navigation_cfg_params/params/pmb2_nav2.yaml
+[2.977s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/pal_navigation_cfg_params/params/tiago_dual_nav2.yaml
+[2.999s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/pal_navigation_cfg_params/params/tiago_nav2.yaml
+[3.003s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/ament_index/resource_index/package_run_dependencies/pal_navigation_cfg_params
+[3.023s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/ament_index/resource_index/parent_prefix_path/pal_navigation_cfg_params
+[3.023s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/pal_navigation_cfg_params/environment/ament_prefix_path.sh
+[3.024s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/pal_navigation_cfg_params/environment/ament_prefix_path.dsv
+[3.038s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/pal_navigation_cfg_params/environment/path.sh
+[3.039s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/pal_navigation_cfg_params/environment/path.dsv
+[3.040s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/pal_navigation_cfg_params/local_setup.bash
+[3.042s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/pal_navigation_cfg_params/local_setup.sh
+[3.042s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/pal_navigation_cfg_params/local_setup.zsh
+[3.043s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/pal_navigation_cfg_params/local_setup.dsv
+[3.044s] -- Symlinking: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/pal_navigation_cfg_params/package.dsv
+[3.083s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/ament_index/resource_index/packages/pal_navigation_cfg_params
+[3.125s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/pal_navigation_cfg_params/cmake/pal_navigation_cfg_paramsConfig.cmake
+[3.132s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/pal_navigation_cfg_params/cmake/pal_navigation_cfg_paramsConfig-version.cmake
+[3.135s] -- Up-to-date symlink: /home/ines/tiago_ws/install/pal_navigation_cfg_params/share/pal_navigation_cfg_params/package.xml
+[3.731s] Invoked command in '/home/ines/tiago_ws/build/pal_navigation_cfg_params' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ines/tiago_ws/install/tiago_autonomous_navigation:/home/ines/tiago_ws/install/tiago_autonomous_exploration:/home/ines/ros2_ws/install/scripts:/home/ines/ros2_ws/install/acrobat:/opt/ros/humble /usr/bin/cmake --install /home/ines/tiago_ws/build/pal_navigation_cfg_params

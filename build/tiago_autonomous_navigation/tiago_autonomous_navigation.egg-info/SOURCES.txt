@@ -1,0 +1,17 @@
+package.xml
+setup.cfg
+setup.py
+launch/autonomous_navigation.launch.py
+launch/task2.launch.py
+resource/tiago_autonomous_navigation
+tiago_autonomous_navigation/__init__.py
+tiago_autonomous_navigation/localization_server.py
+tiago_autonomous_navigation/target_pose_server.py
+tiago_autonomous_navigation/task_2_coordinator.py
+tiago_autonomous_navigation.egg-info/PKG-INFO
+tiago_autonomous_navigation.egg-info/SOURCES.txt
+tiago_autonomous_navigation.egg-info/dependency_links.txt
+tiago_autonomous_navigation.egg-info/entry_points.txt
+tiago_autonomous_navigation.egg-info/requires.txt
+tiago_autonomous_navigation.egg-info/top_level.txt
+tiago_autonomous_navigation.egg-info/zip-safe
