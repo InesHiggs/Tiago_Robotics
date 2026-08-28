@@ -50,7 +50,7 @@ def generate_launch_description():
             )
         ),
         launch_arguments={
-            'map_path': '/home/ines/tiago_ws/group10_map',
+            'map_path': '/home/ines/tiago_ws/src/my_map',
             'use_sim_time': 'True',
             'is_public_sim': 'false',
             'rviz': 'True',
