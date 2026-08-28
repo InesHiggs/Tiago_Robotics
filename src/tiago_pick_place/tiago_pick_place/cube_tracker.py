@@ -28,7 +28,7 @@ class CubeTracker(Node):
             'CubeTracker started. Wainting for cuber 63 and 582'
         )
 
-    def cube_63_callback(self, msg: PoseStamped)
+    def cube_63_callback(self, msg: PoseStamped):
         self.get_logger().info(
             f'Cube 63 detected! '
             f'x={msg.pose.position.x:.3f}, '
