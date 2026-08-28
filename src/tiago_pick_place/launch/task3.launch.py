@@ -100,8 +100,17 @@ def generate_launch_description():
         ],
     )
 
+    cube_tracker = Node(
+        package='tiago_pick_place',
+        executable='cube_tracker',
+        name='cube_tracker',
+        output='screen',
+        parameters=[{'use_sim_time': True}],
+    )
+
     return LaunchDescription([
         tiago_world,
         aruco_63,
         aruco_582,
+        cube_tracker,
     ])
