@@ -68,43 +68,6 @@ def generate_launch_description():
         }],
     )
 
-    aruco_pick = Node(
-        package='aruco_ros',
-        executable='single',
-        name='aruco_single_26',
-        output='screen',
-
-        parameters=[{
-            'image_is_rectified': True,
-
-            # PICK-location marker from Task 2
-            'marker_id': 26,
-            'marker_size': 0.25,
-
-            'camera_frame': CAMERA_FRAME,
-            'marker_frame': 'aruco_marker_26',
-            'reference_frame': '',
-
-            'corner_refinement': 'LINES',
-            'use_sim_time': True,
-        }],
-
-        remappings=[
-            ('/image', CAMERA_IMAGE_TOPIC),
-            ('/camera_info', CAMERA_INFO_TOPIC),
-        ],
-    )
-
-    target_pose_server = Node(
-        package='tiago_autonomous_navigation',
-        executable='target_pose_server',
-        name='target_pose_server',
-        output='screen',
-        parameters=[{
-            'use_sim_time': True,
-        }],
-    )
-
     # ----------------------------------------------------------
     # 2. ArUco detector for cube 63
     # ----------------------------------------------------------
@@ -215,8 +178,6 @@ def generate_launch_description():
             period=13.0,
             actions=[
                 localization,
-                target_pose_server,
-                aruco_pick,
                 aruco_63,
                 aruco_582,
                 cube_tracker,

@@ -46,6 +46,7 @@ setup(
             # Python module                    function
             #        ↓                            ↓
             'cube_tracker = tiago_pick_place.cube_tracker:main',
+            'task3_coordinator = tiago_pick_place.task3_coordinator:main',
         ],
     },
 )
