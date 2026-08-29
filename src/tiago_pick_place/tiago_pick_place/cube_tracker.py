@@ -73,7 +73,7 @@ class CubeTracker(Node):
         pose_base = self.transform_to_base(msg, CUBE_2_ID) #Robot POV
 
         if pose_base is not None:
-            self.cube_63_callback(pose_base)
+            self.cube_582_pub.publish(pose_base)
 
     def transform_to_base(self, msg: PoseStamped, cube_id: int):
         source_frame = msg.header.frame_id

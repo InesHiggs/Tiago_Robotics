@@ -52,9 +52,10 @@ def compute_pregrasp_pose(cube_pose: PoseStamped) -> PoseStamped:
         cube_pose.pose.position.z
     )
 
-    pregrasp_pose.pose.orientation = (
-        cube_pose.pose.orientation
-    )
+    pregrasp_pose.pose.orientation.x = 0.691
+    pregrasp_pose.pose.orientation.y = 0.022
+    pregrasp_pose.pose.orientation.z = 0.723
+    pregrasp_pose.pose.orientation.w = 0.019
 
     return pregrasp_pose
 
