@@ -2,12 +2,15 @@ import rclpy
 
 from action_msgs.msg import GoalStatus
 from geometry_msgs.msg import PoseStamped, Twist
-import time
 
 from tiago_autonomous_navigation.task_2_coordinator import (
     Task2Coordinator,
 )
 
+from tiago_pick_place.manipulation import (
+    ManipulationController,
+    compute_pregrasp_pose,
+)
 # TEMPORARY — replace later with poses loaded from YAML
 PICK_X = -0.38
 PICK_Y = -3.65
@@ -83,7 +86,7 @@ def search_for_cube(nav, cube_id=63, timeout=50.0):
     )
 
     #Lower the head to find the Arucos
-    nav.lower_head(tilt=-0.6)
+    nav.lower_head(tilt=-0.75)
 
     cmd_vel_pub = nav.create_publisher(
         Twist,
@@ -193,6 +196,25 @@ def main(args=None):
             f'x={p.x:.3f}, '
             f'y={p.y:.3f}, '
             f'z={p.z:.3f}'
+        )
+
+        pregrasp_pose = compute_pregrasp_pose(
+            cube_63_pose
+        )
+
+        p_pre = pregrasp_pose.pose.position
+
+        nav.get_logger().info(
+            f'Pre-grasp pose: '
+            f'x={p_pre.x:.3f}, '
+            f'y={p_pre.y:.3f}, '
+            f'z={p_pre.z:.3f}'           
+        )
+
+        manipulator = ManipulationController()
+
+        manipulator.move_to_pregrasp(
+            pregrasp_pose
         )
 
     rclpy.shutdown()

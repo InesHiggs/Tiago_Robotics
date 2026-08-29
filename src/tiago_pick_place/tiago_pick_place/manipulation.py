@@ -82,20 +82,20 @@ class ManipulationController(Node):
         self.moveit2.max_velocity = 0.3
         self.moveit2.max_acceleration = 0.3
 
-        self.executor = (
+        self._executor = (
             rclpy.executors.MultiThreadedExecutor(
                 num_threads=2
             )
         )
 
-        self.executor.add_node(self)
+        self._executor.add_node(self)
 
-        self.executor_thread = Thread(
-            target=self.executor.spin,
+        self._executor_thread = Thread(
+            target=self._executor.spin,
             daemon=True,
         )
 
-        self.executor_thread.start()
+        self._executor_thread.start()
 
     def move_to_pregrasp(self, pregrasp_pose: PoseStamped):
         
