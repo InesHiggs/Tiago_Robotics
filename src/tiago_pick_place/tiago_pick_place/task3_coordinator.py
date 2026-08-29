@@ -61,7 +61,7 @@ def go_to_place(nav):
     )
 
 
-def search_for_cube(nav, cube_id=63, timeout=25.0):
+def search_for_cube(nav, cube_id=63, timeout=50.0):
     """
     Returns:
         PoseStamped of the cube in base_footprint if detected.
@@ -72,15 +72,18 @@ def search_for_cube(nav, cube_id=63, timeout=25.0):
 
     cube_topic = f'/cube_{cube_id}_pose'
 
-    def cube_call_back(msg: PoseStamped):
+    def cube_callback(msg: PoseStamped):
         detected_pose['pose'] = msg
     
-    subscription = nav.create_subscription(
+    cube_subscription = nav.create_subscription(
         PoseStamped,
         cube_topic,
         cube_callback,
         10,
     )
+
+    #Lower the head to find the Arucos
+    nav.lower_head(tilt=-0.6)
 
     cmd_vel_pub = nav.create_publisher(
         Twist,
@@ -92,12 +95,12 @@ def search_for_cube(nav, cube_id=63, timeout=25.0):
         f'Searching for cube {cube_id} with a small circular motion...'
     )
 
-    start_time = time.time()
+    start_time = nav.get_clock().now()
 
     while(
         rclpy.ok()
         and detected_pose['pose'] is None
-        and time.time() - start_time < timeout
+        and (nav.get_clock().now() - start_time).nanoseconds / 1e9 < timeout
     ):
         cmd = Twist()
 
@@ -126,7 +129,7 @@ def search_for_cube(nav, cube_id=63, timeout=25.0):
             f'Cube {cube_id} was not detected.'
         )
 
-        nav.destroy_subscription(subscription)
+        nav.destroy_subscription(cube_subscription)
 
         return None
     
@@ -140,11 +143,7 @@ def search_for_cube(nav, cube_id=63, timeout=25.0):
         f'in {cube_pose.header.frame_id}'
     )
 
-    nav.destroy_subscription(subscription)
-
-
-    def cube_callback(msg: PoseStamped):
-        detected_pose['pose'] = msg
+    nav.destroy_subscription(cube_subscription)
 
     return cube_pose
 
