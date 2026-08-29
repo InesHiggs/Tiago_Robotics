@@ -60,6 +60,7 @@ def go_to_place(nav):
         'PLACE',
     )
 
+
 def search_for_cube(nav, cube_id=63, timeout=25.0):
     """
     Returns:
@@ -74,7 +75,7 @@ def search_for_cube(nav, cube_id=63, timeout=25.0):
     def cube_call_back(msg: PoseStamped):
         detected_pose['pose'] = msg
     
-    subscription = nav.create_subscritption(
+    subscription = nav.create_subscription(
         PoseStamped,
         cube_topic,
         cube_callback,
@@ -141,8 +142,11 @@ def search_for_cube(nav, cube_id=63, timeout=25.0):
 
     nav.destroy_subscription(subscription)
 
-    return cube_pose
 
+    def cube_callback(msg: PoseStamped):
+        detected_pose['pose'] = msg
+
+    return cube_pose
 
 def main(args=None):
     rclpy.init(args=args)
@@ -166,11 +170,32 @@ def main(args=None):
         'Task 3 localization complete.'
     )
 
-    # TEMPORARY TEST:
-    # Just drive to PICK.
-    go_to_pick(nav)
+    if not go_to_pick(nav):
+        nav.get_logger().error(
+            'Could not reach PICK.'
+        )
+        nav.destroy_node()
+        rclpy.shutdown()
+        return
+    
+    cube_63_pose = search_for_cube(
+        nav,
+        cube_id=63,
+    )
+    if cube_63_pose is None:
+        nav.get_logger().error(
+           'Cube 63 could not be found.' 
+        )
+    else:
+        p = cube_63_pose.pose.position
 
-    nav.destroy_node()
+        nav.get_logger().info(
+            f'Cube 63 ready for grasp: '
+            f'x={p.x:.3f}, '
+            f'y={p.y:.3f}, '
+            f'z={p.z:.3f}'
+        )
+
     rclpy.shutdown()
 
 if __name__ == '__main__':
