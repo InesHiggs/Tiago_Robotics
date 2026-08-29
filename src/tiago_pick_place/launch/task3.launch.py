@@ -155,6 +155,16 @@ def generate_launch_description():
         output='screen',
     )
 
+    task3_coordinator = Node(
+        package='tiago_pick_place',
+        executable='task3_coordinator',
+        name='task3_coordinator',
+        output='screen',
+        parameters=[{
+            'use_sim_time': True,
+        }],
+    )
+
     ld = LaunchDescription()
 
     # Start Gazebo/TIAGo immediately
@@ -181,6 +191,15 @@ def generate_launch_description():
                 aruco_63,
                 aruco_582,
                 cube_tracker,
+            ],
+        )
+    )
+
+    ld.add_action(
+        TimerAction(
+            period=20.0,
+            actions=[
+                task3_coordinator,
             ],
         )
     )

@@ -39,6 +39,18 @@ class CubeTracker(Node):
             'CubeTracker started. Wainting for cuber 63 and 582'
         )
 
+        self.cube_63_pub = self.create_publisher(
+            PoseStamped,
+            '/cube_63_pose',
+            10,
+        )
+
+        self.cube_582_pub = self.create_publisher(
+            PoseStamped,
+            '/cube_582_pose',
+            10,
+        )
+
     def cube_63_callback(self, msg: PoseStamped):
         self.get_logger().info( #Camera POV
             f'Cube 63 detected! '
@@ -46,7 +58,10 @@ class CubeTracker(Node):
             f'y={msg.pose.position.y:.3f}, '
             f'z={msg.pose.position.z:.3f}'
         )
-        self.transform_to_base(msg, CUBE_1_ID) #Robot POV
+        pose_base = self.transform_to_base(msg, CUBE_1_ID) #Robot POV
+        
+        if pose_base is not None:
+            self.cube_63_pub.publish(pose_base)
 
     def cube_582_callback(self, msg: PoseStamped):
         self.get_logger().info(#Camera POV
@@ -55,8 +70,11 @@ class CubeTracker(Node):
             f'y={msg.pose.position.y:.3f}, '
             f'z={msg.pose.position.z:.3f}'
         )
-        self.transform_to_base(msg, CUBE_2_ID) #Robot POV
-    
+        pose_base = self.transform_to_base(msg, CUBE_2_ID) #Robot POV
+
+        if pose_base is not None:
+            self.cube_63_callback(pose_base)
+
     def transform_to_base(self, msg: PoseStamped, cube_id: int):
         source_frame = msg.header.frame_id
 
