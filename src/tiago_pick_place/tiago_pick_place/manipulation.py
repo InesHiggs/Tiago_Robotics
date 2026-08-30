@@ -9,6 +9,9 @@ from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.node import Node
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 
+import math
+from scipy.spatial.transform import Rotation
+import numpy as np
 # ----- TIAGo MoveIt configuration -----
 
 JOINT_NAMES = [
@@ -31,6 +34,25 @@ GROUP_NAME = "arm_torso"
 # before the final grasping movement.
 PREGRASP_DISTANCE = 0.16
 
+def compute_grasp_orientation(cube_pose: PoseStamped):
+    """Top-down orientation whose finger axis matches the cube's yaw."""
+    q = cube_pose.pose.orientation
+    R_marker = Rotation.from_quat([q.x, q.y, q.z, q.w]).as_matrix()
+
+    # The marker's local x axis, flattened onto the horizontal plane.
+    ref = R_marker[:, 0].copy()
+    ref[2] = 0.0
+    if np.linalg.norm(ref) < 1e-3:          # marker seen almost edge-on
+        ref = R_marker[:, 1].copy()
+        ref[2] = 0.0
+    ref /= np.linalg.norm(ref)
+
+    approach = np.array([0.0, 0.0, -1.0])   # straight down
+    third = np.cross(approach, ref)
+
+    R = np.column_stack([approach, ref, third])
+    return Rotation.from_matrix(R).as_quat()
+
 def compute_pregrasp_pose(cube_pose: PoseStamped) -> PoseStamped:
     pregrasp_pose = PoseStamped()
     pregrasp_pose.header = cube_pose.header
@@ -41,10 +63,11 @@ def compute_pregrasp_pose(cube_pose: PoseStamped) -> PoseStamped:
         cube_pose.pose.position.z + PREGRASP_DISTANCE
     )
 
-    pregrasp_pose.pose.orientation.x = 0.5
-    pregrasp_pose.pose.orientation.y = 0.5
-    pregrasp_pose.pose.orientation.z = -0.5
-    pregrasp_pose.pose.orientation.w = 0.5
+    qx, qy, qz, qw = compute_grasp_orientation(cube_pose)
+    pregrasp_pose.pose.orientation.x = float(qx)
+    pregrasp_pose.pose.orientation.y = float(qy)
+    pregrasp_pose.pose.orientation.z = float(qz)
+    pregrasp_pose.pose.orientation.w = float(qw)
 
     return pregrasp_pose
 
@@ -58,10 +81,11 @@ def compute_grasp_pose(cube_pose: PoseStamped) -> PoseStamped:
         cube_pose.pose.position.z + 0.01
     )
 
-    pregrasp_pose.pose.orientation.x = 0.5
-    pregrasp_pose.pose.orientation.y = 0.5
-    pregrasp_pose.pose.orientation.z = -0.5
-    pregrasp_pose.pose.orientation.w = 0.5
+    qx, qy, qz, qw = compute_grasp_orientation(cube_pose)
+    pregrasp_pose.pose.orientation.x = float(qx)
+    pregrasp_pose.pose.orientation.y = float(qy)
+    pregrasp_pose.pose.orientation.z = float(qz)
+    pregrasp_pose.pose.orientation.w = float(qw)
 
     return pregrasp_pose
 
