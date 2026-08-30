@@ -29,7 +29,7 @@ GROUP_NAME = "arm_torso"
 
 # Distance between the gripper and cube
 # before the final grasping movement.
-PREGRASP_DISTANCE = 0.15
+PREGRASP_DISTANCE = 0.16
 
 def compute_pregrasp_pose(cube_pose: PoseStamped) -> PoseStamped:
     pregrasp_pose = PoseStamped()
@@ -55,7 +55,7 @@ def compute_grasp_pose(cube_pose: PoseStamped) -> PoseStamped:
     pregrasp_pose.pose.position.x = cube_pose.pose.position.x
     pregrasp_pose.pose.position.y = cube_pose.pose.position.y
     pregrasp_pose.pose.position.z = (
-        cube_pose.pose.position.z - 0.03
+        cube_pose.pose.position.z + 0.01
     )
 
     pregrasp_pose.pose.orientation.x = 0.5

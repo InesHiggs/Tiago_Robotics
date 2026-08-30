@@ -9,7 +9,8 @@ import rclpy.duration
 CUBE_1_ID = 63
 CUBE_2_ID = 582
 
-TARGET_FRAME = 'base_footprint'
+#TARGET_FRAME = 'base_footprint'
+TARGET_FRAME = 'map'
 
 class CubeTracker(Node):
     def __init__(self):

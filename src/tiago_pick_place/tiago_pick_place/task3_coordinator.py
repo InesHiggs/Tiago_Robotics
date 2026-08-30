@@ -202,9 +202,8 @@ def main(args=None):
             pregrasp_pose
         )
 
-        time.sleep(2.5)
-
         manipulator.set_gripper(0.045)#The gripper opens 8cm
+        time.sleep(2.5)
 
         #Calculate Grasp Pose and go there
         grasp_pose = compute_grasp_pose(
@@ -215,7 +214,8 @@ def main(args=None):
         )
         
         #Close Gripper
-        manipulator.set_gripper(-0.045)
+        manipulator.set_gripper(0.0)
+        time.sleep(2.5)
 
     rclpy.shutdown()
 
