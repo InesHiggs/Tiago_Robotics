@@ -7,7 +7,7 @@ from geometry_msgs.msg import PoseStamped
 from pymoveit2 import MoveIt2
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.node import Node
-
+from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 
 # ----- TIAGo MoveIt configuration -----
 
@@ -48,6 +48,22 @@ def compute_pregrasp_pose(cube_pose: PoseStamped) -> PoseStamped:
 
     return pregrasp_pose
 
+def compute_grasp_pose(cube_pose: PoseStamped) -> PoseStamped:
+    pregrasp_pose = PoseStamped()
+    pregrasp_pose.header = cube_pose.header
+
+    pregrasp_pose.pose.position.x = cube_pose.pose.position.x
+    pregrasp_pose.pose.position.y = cube_pose.pose.position.y
+    pregrasp_pose.pose.position.z = (
+        cube_pose.pose.position.z - 0.03
+    )
+
+    pregrasp_pose.pose.orientation.x = 0.5
+    pregrasp_pose.pose.orientation.y = 0.5
+    pregrasp_pose.pose.orientation.z = -0.5
+    pregrasp_pose.pose.orientation.w = 0.5
+
+    return pregrasp_pose
 
 class ManipulationController(Node):
     def __init__(self):
@@ -69,6 +85,12 @@ class ManipulationController(Node):
             callback_group=callback_group,
         )
 
+        self.gripper_pub = self.create_publisher(
+            JointTrajectory,
+            '/gripper_controller/joint_trajectory',
+            10,
+        )
+
         self.moveit2.max_velocity = 0.3
         self.moveit2.max_acceleration = 0.3
 
@@ -87,7 +109,20 @@ class ManipulationController(Node):
 
         self._executor_thread.start()
 
-    def move_to_pregrasp(self, pregrasp_pose: PoseStamped):
+
+    def set_gripper(self, position, seconds=2):
+        traj = JointTrajectory()
+        traj.joint_names = [
+            'gripper_left_finger_joint',
+            'gripper_right_finger_joint',
+        ]
+        point = JointTrajectoryPoint()
+        point.positions = [position, position]
+        point.time_from_start.sec = seconds
+        traj.points = [point]
+        self.gripper_pub.publish(traj)
+
+    def move_to_pose(self, pose: PoseStamped):
         
         self.get_logger().info(
             'Moving arm to pre-grasp pose...'
@@ -95,19 +130,19 @@ class ManipulationController(Node):
 
         self.moveit2.move_to_pose(
             position=[
-                pregrasp_pose.pose.position.x,
-                pregrasp_pose.pose.position.y,
-                pregrasp_pose.pose.position.z,
+                pose.pose.position.x,
+                pose.pose.position.y,
+                pose.pose.position.z,
             ],
 
             quat_xyzw=[
-                pregrasp_pose.pose.orientation.x,
-                pregrasp_pose.pose.orientation.y,
-                pregrasp_pose.pose.orientation.z,
-                pregrasp_pose.pose.orientation.w,
+                pose.pose.orientation.x,
+                pose.pose.orientation.y,
+                pose.pose.orientation.z,
+                pose.pose.orientation.w,
             ],
 
-            frame_id=pregrasp_pose.header.frame_id,
+            frame_id=pose.header.frame_id,
         )
 
         self.moveit2.wait_until_executed()

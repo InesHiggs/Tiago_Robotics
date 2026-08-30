@@ -6,10 +6,12 @@ from geometry_msgs.msg import PoseStamped, Twist
 from tiago_autonomous_navigation.task_2_coordinator import (
     Task2Coordinator,
 )
+import time
 
 from tiago_pick_place.manipulation import (
     ManipulationController,
     compute_pregrasp_pose,
+    compute_grasp_pose,
 )
 # TEMPORARY — replace later with poses loaded from YAML
 PICK_X = -0.38
@@ -189,33 +191,31 @@ def main(args=None):
            'Cube 63 could not be found.' 
         )
     else:
-        p = cube_63_pose.pose.position
-
-        nav.get_logger().info(
-            f'Cube 63 ready for grasp: '
-            f'x={p.x:.3f}, '
-            f'y={p.y:.3f}, '
-            f'z={p.z:.3f}'
-        )
 
         pregrasp_pose = compute_pregrasp_pose(
             cube_63_pose
         )
 
-        p_pre = pregrasp_pose.pose.position
-
-        nav.get_logger().info(
-            f'Pre-grasp pose: '
-            f'x={p_pre.x:.3f}, '
-            f'y={p_pre.y:.3f}, '
-            f'z={p_pre.z:.3f}'           
-        )
-
         manipulator = ManipulationController()
 
-        manipulator.move_to_pregrasp(
+        manipulator.move_to_pose(
             pregrasp_pose
         )
+
+        time.sleep(2.5)
+
+        manipulator.set_gripper(0.045)#The gripper opens 8cm
+
+        #Calculate Grasp Pose and go there
+        grasp_pose = compute_grasp_pose(
+            cube_63_pose
+        )
+        manipulator.move_to_pose(
+            grasp_pose
+        )
+        
+        #Close Gripper
+        manipulator.set_gripper(-0.045)
 
     rclpy.shutdown()
 
