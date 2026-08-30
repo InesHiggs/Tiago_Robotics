@@ -49,7 +49,7 @@ def compute_pregrasp_pose(cube_pose: PoseStamped) -> PoseStamped:
 
     #Same height
     pregrasp_pose.pose.position.z = (
-        cube_pose.pose.position.z
+        cube_pose.pose.position.z + 0.15
     )
 
     pregrasp_pose.pose.orientation.x = 0.691

@@ -1,5 +1,5 @@
 import rclpy
-
+import rclpy.time
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
 from tf2_ros import Buffer, TransformListener, TransformException
@@ -82,7 +82,7 @@ class CubeTracker(Node):
             transform = self.tf_buffer.lookup_transform(
                 TARGET_FRAME,
                 source_frame,
-                msg.header.stamp,
+                rclpy.time.Time(),
                 timeout=rclpy.duration.Duration(seconds=1.0)
             )
 
