@@ -23,7 +23,7 @@ JOINT_NAMES = [
 ]
 
 BASE_LINK_NAME = "base_footprint"
-END_EFFECTOR_NAME = "arm_tool_link"
+END_EFFECTOR_NAME = "gripper_grasping_frame"
 GROUP_NAME = "arm_torso"
 
 
@@ -33,29 +33,18 @@ PREGRASP_DISTANCE = 0.15
 
 def compute_pregrasp_pose(cube_pose: PoseStamped) -> PoseStamped:
     pregrasp_pose = PoseStamped()
-
-    # Use the same coordinate frame as the cube.
     pregrasp_pose.header = cube_pose.header
 
-    # Stay 15 cm behind the cube.
-    pregrasp_pose.pose.position.x = (
-        cube_pose.pose.position.x - PREGRASP_DISTANCE
-    )
-
-    # Same lateral position.
-    pregrasp_pose.pose.position.y = (
-        cube_pose.pose.position.y
-    )
-
-    #Same height
+    pregrasp_pose.pose.position.x = cube_pose.pose.position.x
+    pregrasp_pose.pose.position.y = cube_pose.pose.position.y
     pregrasp_pose.pose.position.z = (
-        cube_pose.pose.position.z + 0.15
+        cube_pose.pose.position.z + PREGRASP_DISTANCE
     )
 
-    pregrasp_pose.pose.orientation.x = 0.691
-    pregrasp_pose.pose.orientation.y = 0.022
-    pregrasp_pose.pose.orientation.z = 0.723
-    pregrasp_pose.pose.orientation.w = 0.019
+    pregrasp_pose.pose.orientation.x = 0.5
+    pregrasp_pose.pose.orientation.y = 0.5
+    pregrasp_pose.pose.orientation.z = -0.5
+    pregrasp_pose.pose.orientation.w = 0.5
 
     return pregrasp_pose
 
