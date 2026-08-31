@@ -9,8 +9,7 @@ import rclpy.duration
 CUBE_1_ID = 63
 CUBE_2_ID = 582
 
-#TARGET_FRAME = 'base_footprint'
-TARGET_FRAME = 'map'
+TARGET_FRAME = 'base_footprint'
 
 class CubeTracker(Node):
     def __init__(self):
@@ -53,24 +52,24 @@ class CubeTracker(Node):
         )
 
     def cube_63_callback(self, msg: PoseStamped):
-        self.get_logger().info( #Camera POV
-            f'Cube 63 detected! '
-            f'x={msg.pose.position.x:.3f}, '
-            f'y={msg.pose.position.y:.3f}, '
-            f'z={msg.pose.position.z:.3f}'
-        )
+        #self.get_logger().info( #Camera POV
+        #    f'Cube 63 detected! '
+        #    f'x={msg.pose.position.x:.3f}, '
+        #    f'y={msg.pose.position.y:.3f}, '
+        #    f'z={msg.pose.position.z:.3f}'
+        #)
         pose_base = self.transform_to_base(msg, CUBE_1_ID) #Robot POV
         
         if pose_base is not None:
             self.cube_63_pub.publish(pose_base)
 
     def cube_582_callback(self, msg: PoseStamped):
-        self.get_logger().info(#Camera POV
-            f'Cube 582 detected! '
-            f'x={msg.pose.position.x:.3f}, '
-            f'y={msg.pose.position.y:.3f}, '
-            f'z={msg.pose.position.z:.3f}'
-        )
+        #self.get_logger().info(#Camera POV
+        #    f'Cube 582 detected! '
+        #    f'x={msg.pose.position.x:.3f}, '
+        #    f'y={msg.pose.position.y:.3f}, '
+        #    f'z={msg.pose.position.z:.3f}'
+        #)
         pose_base = self.transform_to_base(msg, CUBE_2_ID) #Robot POV
 
         if pose_base is not None:
@@ -96,12 +95,12 @@ class CubeTracker(Node):
 
             p = pose_base.pose.position
 
-            self.get_logger().info(
-                f'Cube {cube_id} in {TARGET_FRAME}: '
-                f'x={p.x:.3f}, '
-                f'y={p.y:.3f}, '
-                f'z={p.z:.3f}'
-            )
+            #self.get_logger().info(
+            #    f'Cube {cube_id} in {TARGET_FRAME}: '
+            #    f'x={p.x:.3f}, '
+            #    f'y={p.y:.3f}, '
+            #    f'z={p.z:.3f}'
+            #)
             return pose_base
         
         except TransformException as exc:

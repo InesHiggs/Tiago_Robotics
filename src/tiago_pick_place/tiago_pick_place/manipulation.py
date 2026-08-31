@@ -28,7 +28,7 @@ JOINT_NAMES = [
 BASE_LINK_NAME = "base_footprint"
 END_EFFECTOR_NAME = "gripper_grasping_frame"
 GROUP_NAME = "arm_torso"
-
+TUCKED_JOINT_POSITIONS = [0.15, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0]
 
 # Distance between the gripper and cube
 # before the final grasping movement.
@@ -78,7 +78,7 @@ def compute_grasp_pose(cube_pose: PoseStamped) -> PoseStamped:
     pregrasp_pose.pose.position.x = cube_pose.pose.position.x
     pregrasp_pose.pose.position.y = cube_pose.pose.position.y
     pregrasp_pose.pose.position.z = (
-        cube_pose.pose.position.z + 0.01
+        cube_pose.pose.position.z + 0.04
     )
 
     qx, qy, qz, qw = compute_grasp_orientation(cube_pose)
@@ -133,6 +133,15 @@ class ManipulationController(Node):
 
         self._executor_thread.start()
 
+    def add_table(self, x, y, z, size=(1.2, 0.6, 0.8), frame_id='map'):
+        self.moveit2.add_collision_box(
+            id='pick_table',
+            size=list(size),
+            position=[x, y, z],
+            quat_xyzw=[0.0, 0.0, 0.0, 1.0],
+            frame_id=frame_id,
+        )
+        time.sleep(1.0)
 
     def set_gripper(self, position, seconds=2):
         traj = JointTrajectory()
@@ -169,8 +178,19 @@ class ManipulationController(Node):
             frame_id=pose.header.frame_id,
         )
 
-        self.moveit2.wait_until_executed()
+        ok = self.moveit2.wait_until_executed()
+        if ok:
+            self.get_logger().info('Movement finished.')
+        else:
+            self.get_logger().error('Movement FAILED.')
+        return ok
 
-        self.get_logger().info(
-            'Pre-grasp movement finished.'
-        )
+    def tuck_arm(self) -> bool:
+
+        
+        self.get_logger().info('Tucking arm...')
+        self.moveit2.move_to_configuration(TUCKED_JOINT_POSITIONS)
+        ok = self.moveit2.wait_until_executed()
+        if not ok:
+            self.get_logger().error('Tuck FAILED')
+        return ok
