@@ -214,7 +214,7 @@ def main(args=None):
                 table_top - table_height / 2.0,
             ],
             quat_xyzw=[0.0, 0.0, 0.0, 1.0],
-            frame_id='map',
+            frame_id=cube_63_pose.header.frame_id,
         )
 
         manipulator.moveit2.add_collision_box(
@@ -226,58 +226,39 @@ def main(args=None):
                 cube_63_pose.pose.position.z - 0.035,
             ],
             quat_xyzw=[0.0, 0.0, 0.0, 1.0],
-            frame_id='map',
+            frame_id=cube_63_pose.header.frame_id,
         )
         time.sleep(1.0)
 
         pregrasp_pose = compute_pregrasp_pose(
                     cube_63_pose
         )
-        manipulator.move_to_pose(
-            pregrasp_pose
-        )
+
+        if not manipulator.move_to_pose(pregrasp_pose):
+            nav.get_logger().error('PREGRASP FAILED — aborting grasp.')
+            return
 
         manipulator.set_gripper(0.045)#The gripper opens 8cm
-        manipulator.moveit2.allow_collisions('cube_63', True)
+        #manipulator.moveit2.allow_collisions('cube_63', True)
         time.sleep(2.5)
 
         #Calculate Grasp Pose and go there
         grasp_pose = compute_grasp_pose(
             cube_63_pose
         )
-        manipulator.move_to_pose(
-            grasp_pose
-        )
+        
+        grasp_pose = compute_grasp_pose(cube_63_pose)
 
-
-        # --- measure before closing ---
-        from tf2_ros import Buffer, TransformListener
-
-        buf = Buffer()
-        TransformListener(buf, nav)
-        for _ in range(30):
-            rclpy.spin_once(nav, timeout_sec=0.1)
-
-        try:
-            tf = buf.lookup_transform(
-                'map', 'gripper_grasping_frame', rclpy.time.Time()
-            )
-            t = tf.transform.translation
-            c = grasp_pose.pose.position
-            nav.get_logger().warn(
-                f'error: {t.x-c.x:+.3f} {t.y-c.y:+.3f} {t.z-c.z:+.3f}'
-            )
-        except Exception as exc:
-            print(f'lookup failed: {exc}')
-
-
+        if not manipulator.move_to_pose(grasp_pose):
+            nav.get_logger().error('GRASP DESCENT FAILED — aborting grasp.')
+            return
 
         #Close Gripper
         manipulator.set_gripper(0.035)
         time.sleep(2.5)
 
         #Attached because it is now "part" of the robot
-        #manipulator.moveit2.attach_collision_object(id='cube_63')
+        manipulator.moveit2.attach_collision_object(id='cube_63')
 
         #Tuck arm
         manipulator.tuck_arm()

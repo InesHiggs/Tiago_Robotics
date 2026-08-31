@@ -161,6 +161,15 @@ class ManipulationController(Node):
             'Moving arm to pre-grasp pose...'
         )
 
+        p = pose.pose.position
+        q = pose.pose.orientation
+
+        self.get_logger().warn(
+            f'MOVEIT TARGET: frame={pose.header.frame_id} '
+            f'x={p.x:.3f}, y={p.y:.3f}, z={p.z:.3f} | '
+            f'q=({q.x:.3f}, {q.y:.3f}, {q.z:.3f}, {q.w:.3f})'
+        )
+
         self.moveit2.move_to_pose(
             position=[
                 pose.pose.position.x,
