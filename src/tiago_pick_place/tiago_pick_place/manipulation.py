@@ -33,6 +33,8 @@ TUCKED_JOINT_POSITIONS = [0.15, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0]
 # Distance between the gripper and cube
 # before the final grasping movement.
 PREGRASP_DISTANCE = 0.16
+APPROACH_DISTANCE = 0.08
+GRASP_DISTANCE = 0.04
 
 def compute_grasp_orientation(cube_pose: PoseStamped):
     """Top-down orientation whose finger axis matches the cube's yaw."""
@@ -71,23 +73,45 @@ def compute_pregrasp_pose(cube_pose: PoseStamped) -> PoseStamped:
 
     return pregrasp_pose
 
-def compute_grasp_pose(cube_pose: PoseStamped) -> PoseStamped:
-    pregrasp_pose = PoseStamped()
-    pregrasp_pose.header = cube_pose.header
+def compute_approach_pose(cube_pose: PoseStamped) -> PoseStamped:
+    """Last collision-free pose before intentional contact with the cube."""
 
-    pregrasp_pose.pose.position.x = cube_pose.pose.position.x
-    pregrasp_pose.pose.position.y = cube_pose.pose.position.y
-    pregrasp_pose.pose.position.z = (
-        cube_pose.pose.position.z + 0.04
+    approach_pose = PoseStamped()
+    approach_pose.header = cube_pose.header
+
+    approach_pose.pose.position.x = cube_pose.pose.position.x
+    approach_pose.pose.position.y = cube_pose.pose.position.y
+    approach_pose.pose.position.z = (
+        cube_pose.pose.position.z + APPROACH_DISTANCE
     )
 
     qx, qy, qz, qw = compute_grasp_orientation(cube_pose)
-    pregrasp_pose.pose.orientation.x = float(qx)
-    pregrasp_pose.pose.orientation.y = float(qy)
-    pregrasp_pose.pose.orientation.z = float(qz)
-    pregrasp_pose.pose.orientation.w = float(qw)
 
-    return pregrasp_pose
+    approach_pose.pose.orientation.x = float(qx)
+    approach_pose.pose.orientation.y = float(qy)
+    approach_pose.pose.orientation.z = float(qz)
+    approach_pose.pose.orientation.w = float(qw)
+
+    return approach_pose
+
+def compute_grasp_pose(cube_pose: PoseStamped) -> PoseStamped:
+    grasp_pose = PoseStamped()
+    grasp_pose.header = cube_pose.header
+
+    grasp_pose.pose.position.x = cube_pose.pose.position.x
+    grasp_pose.pose.position.y = cube_pose.pose.position.y
+    grasp_pose.pose.position.z = (
+        cube_pose.pose.position.z + GRASP_DISTANCE
+    )
+
+    qx, qy, qz, qw = compute_grasp_orientation(cube_pose)
+
+    grasp_pose.pose.orientation.x = float(qx)
+    grasp_pose.pose.orientation.y = float(qy)
+    grasp_pose.pose.orientation.z = float(qz)
+    grasp_pose.pose.orientation.w = float(qw)
+
+    return grasp_pose
 
 class ManipulationController(Node):
     def __init__(self):
@@ -155,7 +179,7 @@ class ManipulationController(Node):
         traj.points = [point]
         self.gripper_pub.publish(traj)
 
-    def move_to_pose(self, pose: PoseStamped):
+    def move_to_pose(self, pose: PoseStamped, cartesian=False):
         
         self.get_logger().info(
             'Moving arm to pre-grasp pose...'
@@ -185,6 +209,14 @@ class ManipulationController(Node):
             ],
 
             frame_id=pose.header.frame_id,
+
+            cartesian=cartesian,
+
+            # Review: 2.5 mm Cartesian interpolation
+            cartesian_max_step=0.0025,
+
+            # Don't accept a partially completed Cartesian path
+            cartesian_fraction_threshold=0.99,
         )
 
         ok = self.moveit2.wait_until_executed()
