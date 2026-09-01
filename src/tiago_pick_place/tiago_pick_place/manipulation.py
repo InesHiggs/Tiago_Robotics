@@ -12,6 +12,10 @@ from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 import math
 from scipy.spatial.transform import Rotation
 import numpy as np
+
+import rclpy.time
+import rclpy.duration
+from tf2_ros import Buffer, TransformListener
 # ----- TIAGo MoveIt configuration -----
 
 JOINT_NAMES = [
@@ -73,27 +77,6 @@ def compute_pregrasp_pose(cube_pose: PoseStamped) -> PoseStamped:
 
     return pregrasp_pose
 
-def compute_approach_pose(cube_pose: PoseStamped) -> PoseStamped:
-    """Last collision-free pose before intentional contact with the cube."""
-
-    approach_pose = PoseStamped()
-    approach_pose.header = cube_pose.header
-
-    approach_pose.pose.position.x = cube_pose.pose.position.x
-    approach_pose.pose.position.y = cube_pose.pose.position.y
-    approach_pose.pose.position.z = (
-        cube_pose.pose.position.z + APPROACH_DISTANCE
-    )
-
-    qx, qy, qz, qw = compute_grasp_orientation(cube_pose)
-
-    approach_pose.pose.orientation.x = float(qx)
-    approach_pose.pose.orientation.y = float(qy)
-    approach_pose.pose.orientation.z = float(qz)
-    approach_pose.pose.orientation.w = float(qw)
-
-    return approach_pose
-
 def compute_grasp_pose(cube_pose: PoseStamped) -> PoseStamped:
     grasp_pose = PoseStamped()
     grasp_pose.header = cube_pose.header
@@ -123,6 +106,9 @@ class ManipulationController(Node):
         callback_group = (
             ReentrantCallbackGroup()
         )
+
+        self.tf_buffer = Buffer()
+        self.tf_listener = TransformListener(self.tf_buffer, self)
 
         self.moveit2 = MoveIt2(
             node=self,
@@ -157,6 +143,41 @@ class ManipulationController(Node):
 
         self._executor_thread.start()
 
+    def log_pose_report(self, label, target: PoseStamped, cube_pose: PoseStamped = None):
+        """Log where the gripper actually is vs where it was told to go."""
+        frame = target.header.frame_id
+
+        try:
+            tf = self.tf_buffer.lookup_transform(
+                frame,
+                END_EFFECTOR_NAME,
+                rclpy.time.Time(),
+                timeout=rclpy.duration.Duration(seconds=2.0),
+            )
+        except Exception as exc:
+            self.get_logger().warn(f'[{label}] TF lookup failed: {exc}')
+            return
+
+        g = tf.transform.translation
+        t = target.pose.position
+
+        lines = [
+            f'[{label}] frame = {frame}',
+            f'  commanded : x={t.x:+.3f} y={t.y:+.3f} z={t.z:+.3f}',
+            f'  gripper   : x={g.x:+.3f} y={g.y:+.3f} z={g.z:+.3f}',
+            f'  error     : dx={g.x-t.x:+.3f} dy={g.y-t.y:+.3f} dz={g.z-t.z:+.3f}',
+        ]
+
+        if cube_pose is not None:
+            c = cube_pose.pose.position
+            lateral = math.hypot(g.x - c.x, g.y - c.y)
+            lines += [
+                f'  cube      : x={c.x:+.3f} y={c.y:+.3f} z={c.z:+.3f}',
+                f'  vs cube   : dx={g.x-c.x:+.3f} dy={g.y-c.y:+.3f} '
+                f'dz={g.z-c.z:+.3f} lateral={lateral:.3f}',
+            ]
+
+        self.get_logger().info('\n'.join(lines))
     def add_table(self, x, y, z, size=(1.2, 0.6, 0.8), frame_id='map'):
         self.moveit2.add_collision_box(
             id='pick_table',

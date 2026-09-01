@@ -11,9 +11,7 @@ import time
 from tiago_pick_place.manipulation import (
     ManipulationController,
     compute_pregrasp_pose,
-    compute_approach_pose,
     compute_grasp_pose,
-    compute_lift_pose,
 )
 # TEMPORARY — replace later with poses loaded from YAML
 PICK_X = -0.38
@@ -198,220 +196,162 @@ def main(args=None):
     )
     if cube_63_pose is None:
         nav.get_logger().error(
-           'Cube 63 could not be found.' 
+           'Cube 63 could not be found.'
         )
-    else:
+        return
 
-        manipulator = ManipulationController()
+    manipulator = ManipulationController()
 
-        table_top = cube_63_pose.pose.position.z - 0.07
-        table_height = 0.3
+    table_top = cube_63_pose.pose.position.z - 0.07
+    table_height = 0.3
 
-        manipulator.moveit2.add_collision_box(
-            id='pick_table',
-            size=[1.2, 0.6, table_height],
-            position=[
-                cube_63_pose.pose.position.x,
-                cube_63_pose.pose.position.y,
-                table_top - table_height / 2.0,
-            ],
-            quat_xyzw=[0.0, 0.0, 0.0, 1.0],
-            frame_id=cube_63_pose.header.frame_id,
+    manipulator.moveit2.add_collision_box(
+        id='pick_table',
+        size=[1.2, 0.6, table_height],
+        position=[
+            cube_63_pose.pose.position.x,
+            cube_63_pose.pose.position.y,
+            table_top - table_height / 2.0,
+        ],
+        quat_xyzw=[0.0, 0.0, 0.0, 1.0],
+        frame_id=cube_63_pose.header.frame_id,
+    )
+
+    manipulator.moveit2.add_collision_box(
+        id='cube_63',
+        size=[0.07, 0.07, 0.07],
+        position=[
+            cube_63_pose.pose.position.x,
+            cube_63_pose.pose.position.y,
+            cube_63_pose.pose.position.z - 0.035,
+        ],
+        quat_xyzw=[0.0, 0.0, 0.0, 1.0],
+        frame_id=cube_63_pose.header.frame_id,
+    )
+    time.sleep(1.0)
+
+    pregrasp_pose = compute_pregrasp_pose(cube_63_pose)
+
+    if not manipulator.move_to_pose(pregrasp_pose):
+        manipulator.log_pose_report('PREGRASP-FAILED', pregrasp_pose, cube_63_pose)
+        nav.get_logger().error(
+            'PREGRASP FAILED — aborting grasp.'
         )
+        return
+    manipulator.log_pose_report('PREGRASP', pregrasp_pose, cube_63_pose)
 
-        manipulator.moveit2.add_collision_box(
-            id='cube_63',
-            size=[0.07, 0.07, 0.07],
-            position=[
-                cube_63_pose.pose.position.x,
-                cube_63_pose.pose.position.y,
-                cube_63_pose.pose.position.z - 0.035,
-            ],
-            quat_xyzw=[0.0, 0.0, 0.0, 1.0],
-            frame_id=cube_63_pose.header.frame_id,
+    #Open the gripper
+    manipulator.set_gripper(0.045)
+    time.sleep(2.5)
+    manipulator.log_pose_report('PREGRASP', pregrasp_pose, cube_63_pose)
+
+    return
+
+    nav.get_logger().info(
+        'Starting controlled final grasp approach.'
+    )
+
+    manipulator.moveit2.allow_collisions(
+        'cube_63',
+        True,
+    )
+
+    time.sleep(0.5)
+
+    grasp_pose = compute_grasp_pose(cube_63_pose)
+
+
+
+    if not manipulator.move_to_pose(
+        grasp_pose,
+        cartesian=True,
+    ):
+        nav.get_logger().error(
+            'FINAL CARTESIAN GRASP DESCENT FAILED.'
         )
-        time.sleep(1.0)
-
-        # -------------------------------------------------------
-        # 1. PREGRASP — normal collision-aware OMPL motion
-        # -------------------------------------------------------
-
-        pregrasp_pose = compute_pregrasp_pose(cube_63_pose)
-
-        if not manipulator.move_to_pose(pregrasp_pose):
-            nav.get_logger().error(
-                'PREGRASP FAILED — aborting grasp.'
-            )
-            return
-
-
-        # -------------------------------------------------------
-        # 2. OPEN GRIPPER
-        # -------------------------------------------------------
-
-        manipulator.set_gripper(0.045)
-        time.sleep(2.5)
-
-
-        # -------------------------------------------------------
-        # 3. SAFE APPROACH — +8 cm above cube
-        #
-        # We experimentally established:
-        # +0.08 succeeds
-        # +0.07 fails due to cube collision.
-        # -------------------------------------------------------
-
-        approach_pose = compute_approach_pose(cube_63_pose)
-
-        if not manipulator.move_to_pose(approach_pose):
-            nav.get_logger().error(
-                'SAFE APPROACH FAILED — aborting grasp.'
-            )
-            return
-
-
-        # -------------------------------------------------------
-        # 4. FINAL CONTACT PHASE
-        #
-        # From this point we intentionally need the gripper
-        # to enter the cube's collision region.
-        #
-        # IMPORTANT:
-        # allow_collisions() is enabled ONLY AFTER reaching
-        # the known-safe +8 cm pose.
-        # -------------------------------------------------------
-
-        nav.get_logger().info(
-            'Starting controlled final grasp approach.'
-        )
-
-        manipulator.moveit2.allow_collisions(
-            'cube_63',
-            True,
-        )
-
-        time.sleep(0.5)
-
-
-        # Slow down significantly for contact.
-        old_velocity = manipulator.moveit2.max_velocity
-        old_acceleration = manipulator.moveit2.max_acceleration
-
-        manipulator.moveit2.max_velocity = 0.08
-        manipulator.moveit2.max_acceleration = 0.08
-
-
-        # -------------------------------------------------------
-        # 5. STRAIGHT CARTESIAN DESCENT
-        #
-        # +8 cm -> +4 cm
-        # Same X
-        # Same Y
-        # Same orientation
-        # Only Z changes.
-        # -------------------------------------------------------
-
-        grasp_pose = compute_grasp_pose(cube_63_pose)
-
-        if not manipulator.move_to_pose(
-            grasp_pose,
-            cartesian=True,
-        ):
-            nav.get_logger().error(
-                'FINAL CARTESIAN GRASP DESCENT FAILED.'
-            )
-
-            manipulator.moveit2.max_velocity = old_velocity
-            manipulator.moveit2.max_acceleration = old_acceleration
-
-            manipulator.moveit2.allow_collisions(
-                'cube_63',
-                False,
-            )
-
-            return
-
-
-        # -------------------------------------------------------
-        # 6. CLOSE GRIPPER
-        # -------------------------------------------------------
-
-        nav.get_logger().info(
-            'Grasp depth reached. Closing gripper.'
-        )
-
-        manipulator.set_gripper(0.025)
-        time.sleep(2.5)
+        manipulator.log_pose_report('GRASP', grasp_pose, cube_63_pose)
         return
 
 
-        # -------------------------------------------------------
-        # 7. ATTACH CUBE TO GRIPPER IN MOVEIT
-        # -------------------------------------------------------
+    # -------------------------------------------------------
+    # 6. CLOSE GRIPPER
+    # -------------------------------------------------------
 
-        manipulator.moveit2.attach_collision_object(
-            id='cube_63',
-            link_name='gripper_grasping_frame',
-            touch_links=[
-                'gripper_left_finger_link',
-                'gripper_right_finger_link',
-                'gripper_link',
-                'gripper_grasping_frame',
-            ],
+    nav.get_logger().info(
+        'Grasp depth reached. Closing gripper.'
+    )
+
+    manipulator.set_gripper(0.025)
+    time.sleep(2.5)
+
+
+    # -------------------------------------------------------
+    # 7. ATTACH CUBE TO GRIPPER IN MOVEIT
+    # -------------------------------------------------------
+
+    manipulator.moveit2.attach_collision_object(
+        id='cube_63',
+        link_name='gripper_grasping_frame',
+        touch_links=[
+            'gripper_left_finger_link',
+            'gripper_right_finger_link',
+            'gripper_link',
+            'gripper_grasping_frame',
+        ],
+    )
+
+    time.sleep(0.5)
+
+
+    # -------------------------------------------------------
+    # 8. LIFT STRAIGHT UP BEFORE TUCKING
+    # -------------------------------------------------------
+
+    nav.get_logger().info(
+        'Cube attached. Lifting vertically.'
+    )
+
+    lift_pose = compute_lift_pose(grasp_pose)
+
+    if not manipulator.move_to_pose(
+        lift_pose,
+        cartesian=True,
+    ):
+        nav.get_logger().error(
+            'LIFT FAILED — cube may still be held.'
         )
 
-        time.sleep(0.5)
-
-
-        # -------------------------------------------------------
-        # 8. LIFT STRAIGHT UP BEFORE TUCKING
-        # -------------------------------------------------------
-
-        nav.get_logger().info(
-            'Cube attached. Lifting vertically.'
-        )
-
-        lift_pose = compute_lift_pose(grasp_pose)
-
-        if not manipulator.move_to_pose(
-            lift_pose,
-            cartesian=True,
-        ):
-            nav.get_logger().error(
-                'LIFT FAILED — cube may still be held.'
-            )
-
-            manipulator.moveit2.max_velocity = old_velocity
-            manipulator.moveit2.max_acceleration = old_acceleration
-
-            return
-
-
-        # Restore normal speed.
         manipulator.moveit2.max_velocity = old_velocity
         manipulator.moveit2.max_acceleration = old_acceleration
 
+        return
 
-        # Cube is now clear of the table.
-        # Restore normal collision checking.
-        manipulator.moveit2.allow_collisions(
-            'cube_63',
-            False,
+
+    # Restore normal speed.
+    manipulator.moveit2.max_velocity = old_velocity
+    manipulator.moveit2.max_acceleration = old_acceleration
+
+
+    # Cube is now clear of the table.
+    # Restore normal collision checking.
+    manipulator.moveit2.allow_collisions(
+        'cube_63',
+        False,
+    )
+
+    time.sleep(0.5)
+
+
+    # -------------------------------------------------------
+    # 9. TUCK ONLY AFTER CLEARING TABLE
+    # -------------------------------------------------------
+
+    if not manipulator.tuck_arm():
+        nav.get_logger().error(
+            'TUCK FAILED after grasp.'
         )
-
-        time.sleep(0.5)
-
-
-        # -------------------------------------------------------
-        # 9. TUCK ONLY AFTER CLEARING TABLE
-        # -------------------------------------------------------
-
-        if not manipulator.tuck_arm():
-            nav.get_logger().error(
-                'TUCK FAILED after grasp.'
-            )
-            return
-        
+        return
+    
     if not go_to_place(nav):
         nav.get_logger().error(
             'Could not reach PICK.'
