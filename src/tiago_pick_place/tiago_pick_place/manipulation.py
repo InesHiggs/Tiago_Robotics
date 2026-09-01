@@ -248,7 +248,6 @@ class ManipulationController(Node):
         return ok
 
     def tuck_arm(self) -> bool:
-
         
         self.get_logger().info('Tucking arm...')
         self.moveit2.move_to_configuration(TUCKED_JOINT_POSITIONS)

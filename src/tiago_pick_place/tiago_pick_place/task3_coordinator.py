@@ -242,10 +242,8 @@ def main(args=None):
 
     #Open the gripper
     manipulator.set_gripper(0.045)
-    time.sleep(2.5)
+    time.sleep(10)
     manipulator.log_pose_report('PREGRASP', pregrasp_pose, cube_63_pose)
-
-    return
 
     nav.get_logger().info(
         'Starting controlled final grasp approach.'
@@ -260,8 +258,6 @@ def main(args=None):
 
     grasp_pose = compute_grasp_pose(cube_63_pose)
 
-
-
     if not manipulator.move_to_pose(
         grasp_pose,
         cartesian=True,
@@ -271,7 +267,7 @@ def main(args=None):
         )
         manipulator.log_pose_report('GRASP', grasp_pose, cube_63_pose)
         return
-
+    return
 
     # -------------------------------------------------------
     # 6. CLOSE GRIPPER
