@@ -254,7 +254,7 @@ def main(args=None):
         True,
     )
 
-    time.sleep(0.5)
+    time.sleep(10)
 
     grasp_pose = compute_grasp_pose(cube_63_pose)
 
@@ -267,18 +267,16 @@ def main(args=None):
         )
         manipulator.log_pose_report('GRASP', grasp_pose, cube_63_pose)
         return
-    return
-
-    # -------------------------------------------------------
-    # 6. CLOSE GRIPPER
-    # -------------------------------------------------------
 
     nav.get_logger().info(
         'Grasp depth reached. Closing gripper.'
     )
 
-    manipulator.set_gripper(0.025)
-    time.sleep(2.5)
+    manipulator.set_gripper(0.034)
+    time.sleep(10)
+
+    return
+    
 
 
     # -------------------------------------------------------

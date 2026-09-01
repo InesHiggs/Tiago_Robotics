@@ -37,8 +37,7 @@ TUCKED_JOINT_POSITIONS = [0.15, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0]
 # Distance between the gripper and cube
 # before the final grasping movement.
 PREGRASP_DISTANCE = 0.16
-APPROACH_DISTANCE = 0.08
-GRASP_DISTANCE = 0.04
+GRASP_DISTANCE = 0.03
 
 def compute_grasp_orientation(cube_pose: PoseStamped):
     """Top-down orientation whose finger axis matches the cube's yaw."""
