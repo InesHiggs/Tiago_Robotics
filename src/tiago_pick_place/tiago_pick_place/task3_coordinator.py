@@ -12,6 +12,7 @@ from tiago_pick_place.manipulation import (
     ManipulationController,
     compute_pregrasp_pose,
     compute_grasp_pose,
+    compute_lift_pose,
 )
 # TEMPORARY — replace later with poses loaded from YAML
 PICK_X = -0.38
@@ -272,34 +273,11 @@ def main(args=None):
         'Grasp depth reached. Closing gripper.'
     )
 
-    manipulator.set_gripper(0.034)
+    manipulator.set_gripper(0.033)
     time.sleep(10)
-
-    return
-    
-
-
-    # -------------------------------------------------------
-    # 7. ATTACH CUBE TO GRIPPER IN MOVEIT
-    # -------------------------------------------------------
-
-    manipulator.moveit2.attach_collision_object(
-        id='cube_63',
-        link_name='gripper_grasping_frame',
-        touch_links=[
-            'gripper_left_finger_link',
-            'gripper_right_finger_link',
-            'gripper_link',
-            'gripper_grasping_frame',
-        ],
-    )
-
-    time.sleep(0.5)
-
-
-    # -------------------------------------------------------
-    # 8. LIFT STRAIGHT UP BEFORE TUCKING
-    # -------------------------------------------------------
+    if not manipulator.attach_cube('aruco_cube_exam_id63'):
+        nav.get_logger().error('ATTACH FAILED')
+        return
 
     nav.get_logger().info(
         'Cube attached. Lifting vertically.'
@@ -314,26 +292,8 @@ def main(args=None):
         nav.get_logger().error(
             'LIFT FAILED — cube may still be held.'
         )
-
-        manipulator.moveit2.max_velocity = old_velocity
-        manipulator.moveit2.max_acceleration = old_acceleration
-
         return
-
-
-    # Restore normal speed.
-    manipulator.moveit2.max_velocity = old_velocity
-    manipulator.moveit2.max_acceleration = old_acceleration
-
-
-    # Cube is now clear of the table.
-    # Restore normal collision checking.
-    manipulator.moveit2.allow_collisions(
-        'cube_63',
-        False,
-    )
-
-    time.sleep(0.5)
+    return
 
 
     # -------------------------------------------------------

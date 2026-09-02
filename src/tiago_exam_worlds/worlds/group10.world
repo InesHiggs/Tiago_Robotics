@@ -82,6 +82,7 @@
       <real_time_factor>1</real_time_factor>
       <real_time_update_rate>1000</real_time_update_rate>
     </physics>
+    <plugin name="gazebo_link_attacher" filename="libgazebo_link_attacher.so"/>
     <scene>
       <ambient>0.4 0.4 0.4 1</ambient>
       <background>0.7 0.7 0.7 1</background>
@@ -1371,7 +1372,7 @@
 
     <include>
       <uri>model://env_exam_cylinder1</uri>
-      0<pose>.0 -4.5 0.1 0 0 0</pose>
+      <pose>.0 -4.5 0.1 0 0 0</pose>
       <static>1</static>
     </include>
 

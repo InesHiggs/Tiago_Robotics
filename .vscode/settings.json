@@ -39,7 +39,8 @@
         "/home/ines/ros2_ws/build/acrobat",
         "/home/ines/ros2_ws/install/acrobat/lib/python3.10/site-packages",
         "/opt/ros/humble/lib/python3.10/site-packages",
-        "/opt/ros/humble/local/lib/python3.10/dist-packages"
-    ],
+        "/opt/ros/humble/local/lib/python3.10/dist-packages",
+        "/home/ines/tiago_ws/install/linkattacher_msgs/lib/python3.10/site-packages"
+            ],
     "ros.distro": "humble"
 }

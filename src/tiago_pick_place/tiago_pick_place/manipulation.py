@@ -8,6 +8,7 @@ from pymoveit2 import MoveIt2
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.node import Node
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
+from linkattacher_msgs.srv import AttachLink, DetachLink
 
 import math
 from scipy.spatial.transform import Rotation
@@ -16,6 +17,7 @@ import numpy as np
 import rclpy.time
 import rclpy.duration
 from tf2_ros import Buffer, TransformListener
+
 # ----- TIAGo MoveIt configuration -----
 
 JOINT_NAMES = [
@@ -95,6 +97,17 @@ def compute_grasp_pose(cube_pose: PoseStamped) -> PoseStamped:
 
     return grasp_pose
 
+LIFT_DISTANCE = 0.20
+
+def compute_lift_pose(grasp_pose: PoseStamped, height=LIFT_DISTANCE) -> PoseStamped:
+    lift_pose = PoseStamped()
+    lift_pose.header = grasp_pose.header
+    lift_pose.pose.position.x = grasp_pose.pose.position.x
+    lift_pose.pose.position.y = grasp_pose.pose.position.y
+    lift_pose.pose.position.z = grasp_pose.pose.position.z + height
+    lift_pose.pose.orientation = grasp_pose.pose.orientation
+    return lift_pose
+
 class ManipulationController(Node):
     def __init__(self):
 
@@ -123,7 +136,6 @@ class ManipulationController(Node):
             '/gripper_controller/joint_trajectory',
             10,
         )
-
         self.moveit2.max_velocity = 0.3
         self.moveit2.max_acceleration = 0.3
 
@@ -254,3 +266,34 @@ class ManipulationController(Node):
         if not ok:
             self.get_logger().error('Tuck FAILED')
         return ok
+
+    def _link_call(self, srv_type, srv_name, request, timeout=10.0):
+        node = rclpy.create_node('link_attacher_client')
+        try:
+            client = node.create_client(srv_type, srv_name)
+            if not client.wait_for_service(timeout_sec=timeout):
+                self.get_logger().error(f'{srv_name} unavailable')
+                return False
+            future = client.call_async(request)
+            rclpy.spin_until_future_complete(node, future, timeout_sec=timeout)
+            if not future.done():
+                self.get_logger().error(f'{srv_name} timed out')
+                return False
+            result = future.result()
+            if not result.success:
+                self.get_logger().error(f'{srv_name} refused: {result.message}')
+                return False
+            return True
+        finally:
+            node.destroy_node()
+    def attach_cube(self, cube_model, robot='tiago', ee_link='wrist_ft_link'):
+        req = AttachLink.Request()
+        req.model1_name, req.link1_name = robot, ee_link
+        req.model2_name, req.link2_name = cube_model, 'link'
+        return self._link_call(AttachLink, '/ATTACHLINK', req)
+
+    def detach_cube(self, cube_model, robot='tiago', ee_link='wrist_ft_link'):
+        req = DetachLink.Request()
+        req.model1_name, req.link1_name = robot, ee_link
+        req.model2_name, req.link2_name = cube_model, 'link'
+        return self._link_call(DetachLink, '/DETACHLINK', req)
