@@ -7,7 +7,7 @@ from tiago_autonomous_navigation.task_2_coordinator import (
     Task2Coordinator,
 )
 import time
-
+import math
 from tiago_pick_place.manipulation import (
     ManipulationController,
     compute_pregrasp_pose,
@@ -19,12 +19,12 @@ from tiago_pick_place.manipulation import (
 PICK_X = -0.38
 PICK_Y = -3.65
 
-PLACE_X = -6.64
+PLACE_X = -6.57
 PLACE_Y = -4.72
 
-PLACE_TARGET_X = -6.64
+PLACE_TARGET_X = -6.57
 PLACE_TARGET_Y = -4.72
-PLACE_TABLE_TOP = 0.45
+PLACE_TABLE_TOP = 0.15
 
 def go_to_location(nav, x, y, name):
 
@@ -189,7 +189,31 @@ def retreat(nav, distance=0.4, speed=0.1):
         rclpy.spin_once(nav, timeout_sec=0.05)
 
     nav.destroy_publisher(cmd_vel_pub)
-    
+
+#This should disapear once Task2 is changed with the yaml
+def get_nav_pose(nav, marker_x, marker_y, distance=0.65):
+    rx = nav.robot_pose.position.x
+    ry = nav.robot_pose.position.y
+
+    angle = math.atan2(ry - marker_y, rx - marker_x)
+
+    goal = PoseStamped()
+    goal.header.frame_id = 'map'
+    goal.header.stamp = nav.get_clock().now().to_msg()
+
+    goal.pose.position.x = marker_x + distance * math.cos(angle)
+    goal.pose.position.y = marker_y + distance * math.sin(angle)
+
+    yaw = math.atan2(
+        marker_y - goal.pose.position.y,
+        marker_x - goal.pose.position.x
+    )
+
+    goal.pose.orientation.z = math.sin(yaw / 2.0)
+    goal.pose.orientation.w = math.cos(yaw / 2.0)
+
+    return goal
+
 def main(args=None):
     rclpy.init(args=args)
 
@@ -288,13 +312,8 @@ def main(args=None):
 
     grasp_pose = compute_grasp_pose(cube_63_pose)
 
-    if not manipulator.move_to_pose(
-        grasp_pose,
-        cartesian=True,
-    ):
-        nav.get_logger().error(
-            'FINAL CARTESIAN GRASP DESCENT FAILED.'
-        )
+    if not manipulator.move_to_pose(grasp_pose,cartesian=True,):
+        nav.get_logger().error('FINAL CARTESIAN GRASP DESCENT FAILED.')
         manipulator.log_pose_report('GRASP', grasp_pose, cube_63_pose)
         return
 
@@ -331,12 +350,17 @@ def main(args=None):
 
     retreat(nav)
 
-    if not go_to_place(nav):
-        nav.get_logger().error(
-            'Could not reach PICK.'
-        )
-        nav.destroy_node()
-        rclpy.shutdown()
+    ############# Go to PLACE pose #############
+    #Mental note: Put a function here
+    place_nav_pose = get_nav_pose(nav, PLACE_X, PLACE_Y)
+    if not nav.go_to_pose(place_nav_pose):
+        nav.get_logger().error('Could not send PLACE goal.')
+        return
+
+    nav._wait_for_nav(ignore_detection=True)
+
+    if nav.status != GoalStatus.STATUS_SUCCEEDED:
+        nav.get_logger().error('Could not reach PLACE.')
         return
     
     #Place the first Cube
@@ -356,8 +380,29 @@ def main(args=None):
     time.sleep(0.5)
     manipulator.set_gripper(0.045)
 
+    #1. Go to the upper position and tuck
+    lift_pose_place = compute_lift_pose(place_pose)
+    if not manipulator.move_to_pose(lift_pose_place,cartesian=True,):
+        nav.get_logger().error('FINAL CARTESIAN GRASP DESCENT FAILED.')
+        manipulator.log_pose_report('GRASP', lift_pose_place, cube_63_pose)
+        return
+
+    nav.get_logger().info(
+        'Grasp depth reached. Closing gripper.'
+    )
 
     rclpy.shutdown()
+
+    #2. Go to the Pick Position
+    if not go_to_pick(nav):
+        nav.get_logger().error(
+            'Could not reach PICK.'
+        )
+        nav.destroy_node()
+        rclpy.shutdown()
+        return
+
+    #2. 
 
 if __name__ == '__main__':
     main()

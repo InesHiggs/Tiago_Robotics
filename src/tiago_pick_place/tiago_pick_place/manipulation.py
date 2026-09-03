@@ -44,7 +44,7 @@ LIFT_DISTANCE = 0.20
 
 #Place the cube
 CUBE_SIZE = 0.07
-RELEASE_CLEARENCE = 0.01
+RELEASE_CLEARENCE = 0.05
 
 def compute_grasp_orientation(cube_pose: PoseStamped):
     """Top-down orientation whose finger axis matches the cube's yaw."""
@@ -120,7 +120,7 @@ def compute_place_pose(place_pose: PoseStamped, table_top_z: float) -> PoseStamp
     release_pose.pose.position.x = place_pose.pose.position.x
     release_pose.pose.position.y = place_pose.pose.position.y
     release_pose.pose.position.z = (
-        table_top_z + CUBE_SIZE + RELEASE_CLEARENCE
+        table_top_z + (CUBE_SIZE/2) + RELEASE_CLEARENCE
     )
 
     release_pose.pose.orientation = place_pose.pose.orientation
