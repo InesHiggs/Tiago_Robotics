@@ -13,13 +13,18 @@ from tiago_pick_place.manipulation import (
     compute_pregrasp_pose,
     compute_grasp_pose,
     compute_lift_pose,
+    compute_place_pose,
 )
 # TEMPORARY — replace later with poses loaded from YAML
 PICK_X = -0.38
 PICK_Y = -3.65
 
-PLACE_X = -6.57
+PLACE_X = -6.64
 PLACE_Y = -4.72
+
+PLACE_TARGET_X = -6.64
+PLACE_TARGET_Y = -4.72
+PLACE_TABLE_TOP = 0.45
 
 def go_to_location(nav, x, y, name):
 
@@ -161,6 +166,30 @@ def search_for_cube(nav, cube_id=63, timeout=50.0):
 
     return cube_pose
 
+def retreat(nav, distance=0.4, speed=0.1):
+    """Back the base straight out of the table's inflation zone."""
+    cmd_vel_pub = nav.create_publisher(Twist, '/cmd_vel', 10)
+
+    duration = distance / speed
+    start = nav.get_clock().now()
+
+    cmd = Twist()
+    cmd.linear.x = -abs(speed)
+
+    while (
+        rclpy.ok()
+        and (nav.get_clock().now() - start).nanoseconds / 1e9 < duration
+    ):
+        cmd_vel_pub.publish(cmd)
+        rclpy.spin_once(nav, timeout_sec=0.05)
+
+    stop = Twist()
+    for _ in range(5):
+        cmd_vel_pub.publish(stop)
+        rclpy.spin_once(nav, timeout_sec=0.05)
+
+    nav.destroy_publisher(cmd_vel_pub)
+    
 def main(args=None):
     rclpy.init(args=args)
 
@@ -293,19 +322,15 @@ def main(args=None):
             'LIFT FAILED — cube may still be held.'
         )
         return
-    return
-
-
-    # -------------------------------------------------------
-    # 9. TUCK ONLY AFTER CLEARING TABLE
-    # -------------------------------------------------------
 
     if not manipulator.tuck_arm():
         nav.get_logger().error(
             'TUCK FAILED after grasp.'
         )
         return
-    
+
+    retreat(nav)
+
     if not go_to_place(nav):
         nav.get_logger().error(
             'Could not reach PICK.'
@@ -314,7 +339,22 @@ def main(args=None):
         rclpy.shutdown()
         return
     
+    #Place the first Cube
+    place_pose = PoseStamped()
+    place_pose.header.frame_id = 'base_footprint'
+    place_pose.pose.position.x = PLACE_TARGET_X
+    place_pose.pose.position.y = PLACE_TARGET_Y
+    place_pose.pose.orientation = grasp_pose.pose.orientation
+    release_pose = compute_place_pose(place_pose, PLACE_TABLE_TOP)
 
+    if not manipulator.move_to_pose(release_pose, cartesian=True):
+        nav.get_logger().error('RELEASE DESCENT FAILED')
+        return
+
+    manipulator.detach_cube('aruco_cube_exam_id63')
+    manipulator.moveit2.detach_collision_object('cube_63')
+    time.sleep(0.5)
+    manipulator.set_gripper(0.045)
 
 
     rclpy.shutdown()

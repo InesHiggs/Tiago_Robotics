@@ -40,6 +40,11 @@ TUCKED_JOINT_POSITIONS = [0.15, 0.20, -1.34, -0.20, 1.94, -1.57, 1.37, 0.0]
 # before the final grasping movement.
 PREGRASP_DISTANCE = 0.16
 GRASP_DISTANCE = 0.03
+LIFT_DISTANCE = 0.20
+
+#Place the cube
+CUBE_SIZE = 0.07
+RELEASE_CLEARENCE = 0.01
 
 def compute_grasp_orientation(cube_pose: PoseStamped):
     """Top-down orientation whose finger axis matches the cube's yaw."""
@@ -97,7 +102,6 @@ def compute_grasp_pose(cube_pose: PoseStamped) -> PoseStamped:
 
     return grasp_pose
 
-LIFT_DISTANCE = 0.20
 
 def compute_lift_pose(grasp_pose: PoseStamped, height=LIFT_DISTANCE) -> PoseStamped:
     lift_pose = PoseStamped()
@@ -107,6 +111,21 @@ def compute_lift_pose(grasp_pose: PoseStamped, height=LIFT_DISTANCE) -> PoseStam
     lift_pose.pose.position.z = grasp_pose.pose.position.z + height
     lift_pose.pose.orientation = grasp_pose.pose.orientation
     return lift_pose
+
+def compute_place_pose(place_pose: PoseStamped, table_top_z: float) -> PoseStamped:
+    release_pose = PoseStamped()
+
+    release_pose.header = place_pose.header
+
+    release_pose.pose.position.x = place_pose.pose.position.x
+    release_pose.pose.position.y = place_pose.pose.position.y
+    release_pose.pose.position.z = (
+        table_top_z + CUBE_SIZE + RELEASE_CLEARENCE
+    )
+
+    release_pose.pose.orientation = place_pose.pose.orientation
+
+    return release_pose
 
 class ManipulationController(Node):
     def __init__(self):
@@ -286,6 +305,7 @@ class ManipulationController(Node):
             return True
         finally:
             node.destroy_node()
+            
     def attach_cube(self, cube_model, robot='tiago', ee_link='wrist_ft_link'):
         req = AttachLink.Request()
         req.model1_name, req.link1_name = robot, ee_link
